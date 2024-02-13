@@ -6,7 +6,7 @@ const Layout = ({children}) => {
   return (
    <>
    <LayoutProvider>
-    <Topbar/>
+   
     <Navbarr/>
     {children}
    </LayoutProvider>
