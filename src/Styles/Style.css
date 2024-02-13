@@ -1,0 +1,68 @@
+@import url('../App.css');
+.hottopbar--wrapper
+{
+    background-color: #083858;
+    color:white;
+    text-align: center;
+    padding: 6px;
+    p 
+    {
+        margin:0px;
+        font-size: 16px;
+        font-family: var(--font-librecalson);
+        font-weight: 500;
+    }
+    span 
+    {
+        text-decoration: underline;
+    }
+    
+}
+.topbar--container
+{
+    display: flex;
+    justify-content: space-between;
+    padding:6px 0px;
+    
+}
+.topbar--contactinfo--container
+{
+    gap:30px;
+}
+.firstcontact--info
+{
+    align-items: center;
+    gap:10px;
+  p 
+     {
+        font-size: 15px;
+        font-family: var(--font-librecalson);
+        font-weight: 500;
+        letter-spacing: 0.7px;
+        margin:0px
+     }
+     
+}
+.topbar--icons
+{
+font-size: 22px;
+align-items: center;
+font-weight: 600;
+}
+.topbar--socialinfo--container
+{
+          display   : flex;
+          gap:40px;
+}
+.navbar--wrapper
+{
+  background-color: transparent;
+}
+.navbar--row
+{
+    width: 100%;
+}
+.dropdown-toggle::after
+{
+    display: none ;
+}
