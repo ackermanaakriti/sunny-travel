@@ -7,6 +7,14 @@ const ServicePage = () => {
   return (
     <Layout>
       <section className="services-page section-break">
+      <div className="services--wrapper">
+          <div className="servicesoverlay">
+            
+          </div>
+          <div className="services--content">
+            <h1>Our Services</h1>
+          </div>
+        </div>
         <Container>
           <div className="services-info">
             <p className="services-summary">

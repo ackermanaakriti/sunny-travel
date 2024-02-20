@@ -1,6 +1,8 @@
 import React from 'react'
 import img from '../../Images/pokhara.png'
 import './Card.css'
+import ExploreMoreBtn from '../Buttons/ExploreMoreBtn'
+import Cardbuttons from '../Buttons/Cardbuttons'
 
 
 const DestinationCard = ({props}) => {
@@ -34,7 +36,7 @@ const DestinationCard = ({props}) => {
       </div>
      <div className='sticker'>Trending</div>
      <div className='destinationcard--content'>
-        <h1>Mountain Base Camp</h1>
+        <h4>Mountain Base Camp</h4>
         <div className='destinationcard--subcontent'>
           <div>
          
@@ -52,8 +54,10 @@ const DestinationCard = ({props}) => {
           </div>
      <div className='cardFooter'>
       <div class="buttonWrapper">
-        button 
+      <Cardbuttons value='Explore'/>
+
       </div>
+      <p className='pricetag--c'> Rs.2,234</p>
       </div> 
        
         </div>

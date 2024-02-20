@@ -8,48 +8,133 @@
 
 
 
-    .form--headers {
-        text-align: center;
+  
+    .form--headers--region {
+        text-align: left;
         font-size: 22px;
         font-family: var(--font--poppins);
         font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        padding:2px 20px 2px 10px ;
+        align-items: center;
+    
+        h5 {
+            margin: 10px;
+          
+            color: var(  --blackcolor);
+        }
+        span 
+        {
+            font-size: 15px !important;
+        }
+    }
+    .form--checkboxes--list
+    {
+        padding:10px;
+        .form-check
+        {
+            padding-top: 5px;
+
+            input 
+            {
+
+            }
+            label 
+            {
+                font-size: 18px;
+            }
+        }
     }
 }
 
-.form--headers--region {
-    text-align: left;
-    font-size: 22px;
-    font-family: var(--font--poppins);
-    font-weight: 600;
 
-    p {
-        margin: 10px;
+
+.form--dropdown--activities
+{
+    .form--headers--activities {
+        
+        font-size: 22px;
+        font-family: var(--font--poppins);
+        font-weight: 600;
+        border-top: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        padding:2px 20px 2px 10px ;
+        align-items: center;
+    
+        h5 {
+            margin: 10px;
+           
+            color: var( --blackcolor);
+        }
+        span 
+        {
+            font-size: 15px !important;
+        }
+    }
+    .form--checkboxes--list
+    {
+        padding:10px;
+        .form-check
+        {
+            padding-top: 5px;
+
+            input 
+            {
+
+            }
+            label 
+            {
+                font-size: 18px;
+            }
+        }
     }
 }
 
-.form--headers--activities {
-    text-align: left;
-    font-size: 22px;
-    font-family: var(--font--poppins);
-    font-weight: 600;
-    border-top: 1px solid gray;
 
-    p {
-        margin: 10px;
+.form--dropdown--budget
+{
+    .form--headers--budget {
+   
+        font-size: 22px;
+        font-family: var(--font--poppins);
+        font-weight: 600;
+        border-top: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        padding:2px 20px 2px 10px ;
+        align-items: center;
+    
+        h5 {
+            margin: 10px;
+            
+            color: var(  --blackcolor);
+        }
+        span 
+        {
+            font-size: 15px !important;
+        }
+    }
+    .form--checkboxes--list
+    {
+        padding:10px;
+        .form-check
+        {
+            padding-top: 5px;
+
+            input 
+            {
+
+            }
+            label 
+            {
+                font-size: 18px;
+            }
+        }
     }
 }
 
-.form--headers--budget {
-    text-align: left;
-    font-size: 22px;
-    font-family: var(--font--poppins);
-    font-weight: 600;
-    border-top: 1px solid gray;
-
-    p {
-        margin: 10px;
-    }
-}
 
 .form--checkboxes--list {
     border-top: 1px solid gray;

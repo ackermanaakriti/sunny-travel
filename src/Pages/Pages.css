@@ -25,3 +25,39 @@
 
 
 }
+.services--wrapper 
+{
+   
+   background-image: url('../Images/servicesbg.png');
+   height: 500px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+   position: relative;
+   .servicesoverlay
+   {
+    position: relative;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(23, 23, 23, 0.26);
+   }
+   .services--content
+   {
+    position: absolute;
+    bottom: 30px;
+    left:50%;
+    transform: translateX(-50%);
+   
+    h1 
+    {
+         color: var(--whitecolor );
+        text-align: center;
+        font-family: var(--font-librecalson);
+        font-size: 60px;
+    }
+   }
+
+
+}

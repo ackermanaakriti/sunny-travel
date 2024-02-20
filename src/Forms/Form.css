@@ -39,9 +39,15 @@
 .feedbackform--container input {
     border: 2px #292929 solid;
     border-radius: 5px;
-    height: 45px;
+  
 }
 .feedbackform--container label{
+    font-size: 18px;
+    color:#292929;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.feedbackform--container select{
     font-size: 18px;
     color:#292929;
     font-weight: 600;
@@ -50,7 +56,7 @@
 .feedbackform--container input, .feedbackform--container select, .feedbackform--container textarea,.feedbackform--container select{
     border: 2px #292929 solid;
     border-radius: 5px;
-    height: 45px;
+   
     font-size: 18px;
     padding:0 10px;
     color: #797979;

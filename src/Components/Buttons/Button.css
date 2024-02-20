@@ -12,3 +12,13 @@
 
     }
 }
+.cardbutton
+{
+    background-color: var(--primary-color);
+        border: none;
+        border-radius: 7px;
+        color:var(--whitecolor);
+        font-family: var(--font-poppins);
+        font-size: 14px;
+        padding: 8px 20px;
+}

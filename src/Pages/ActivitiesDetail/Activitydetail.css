@@ -1,0 +1,87 @@
+
+.activitydetail--
+{
+    padding-top: 50px;
+}
+.activitydetail--wrapper
+{
+    background-image: url('../../Images/activitydetail.png');
+    height: 420px;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    .activitydetail--overlay
+   {
+    position: relative;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(23, 23, 23, 0.26);
+   }
+    .activitydetail--content
+    {
+        position: absolute;
+        bottom: 30px;
+        left:50%;
+        transform: translateX(-50%);
+       
+        h1 
+        {
+             color: var(--whitecolor );
+            text-align: center;
+            font-family: var(--font-librecalson);
+            font-size: 60px;
+        }
+    }
+}
+.activitiesdetailinfo--container
+{
+    .activitidetailinfo--descrip
+    {
+         h3 
+         {
+            color: var(--primary-color);
+            font-size: 28px;
+            font-weight: 600;
+            font-family: var(--font-librecalson);
+         }
+         p 
+         {
+            text-align: justify;
+         
+            margin-bottom: 0;
+            color:var( --subheader--color);
+            font-size: 18px;
+         }
+    }
+    .activitidetailinfo--descrip--
+    {
+        padding-top: 30px;
+        h3 
+        {
+           color: var(--primary-color);
+           font-size: 28px;
+           font-weight: 600;
+           font-family: var(--font-librecalson);
+        }
+        p 
+        {
+           text-align: justify;
+        
+           margin-bottom: 0;
+           color:var( --subheader--color);
+           font-size: 18px;
+        }
+        
+    
+    }
+    .--imgswiper
+    {
+        padding-top: 60px;
+    }
+}
+.side-sidecomp
+{
+    padding-left: 40px;
+}
