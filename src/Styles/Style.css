@@ -1,68 +1,173 @@
-@import url('../App.css');
-.hottopbar--wrapper
+@import url("../App.css");
+.navbar--main--wrapper
 {
-    background-color: #083858;
-    color:white;
-    text-align: center;
-    padding: 6px;
-    p 
-    {
-        margin:0px;
-        font-size: 16px;
-        font-family: var(--font-librecalson);
-        font-weight: 500;
-    }
-    span 
-    {
-        text-decoration: underline;
-    }
-    
+  position: absolute;
+  width: 100%;
+  z-index: 99;
 }
-.topbar--container
-{
+.hottopbar--wrapper {
+  background-color: #083858;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  p {
+    margin: 0px;
+    font-size: 16px;
+    font-family: var(--font-librecalson);
+    font-weight: 500;
+  }
+  span {
+    text-decoration: underline;
+  }
+}
+.topbar--container {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0px;
+}
+.topbar--contactinfo--container {
+  gap: 30px;
+}
+.firstcontact--info {
+  align-items: center;
+  gap: 10px;
+  p {
+    font-size: 15px;
+    font-family: var(--font-librecalson);
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    margin: 0px;
+    color:var( --whitecolor);
+  }
+}
+.topbar--icons {
+  font-size: 22px;
+  align-items: center;
+  font-weight: 600;
+  color:var( --whitecolor);
+}
+.topbar--socialinfo--container {
+  display: flex;
+  gap: 40px;
+  color:var( --whitecolor);
+}
+.navbar--wrapper {
+  background-color: transparent;
+  padding:5px;
+  border-top: 1px solid rgba(194, 194, 194, 0.4);
+    border-bottom: 1px solid rgba(194, 194, 194, 0.4);
+    align-items: center;
+    display: flex;
+  .navbar--row {
+    width: 100%;
+    align-items: center;
+  }
+  .col-3 
+  {
+    display: flex;
+    justify-content: end;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-custom {
+    position:relative;
+    padding-right:15px;
+    font-size:18px;
+    font-family: var(--font-librecalson);
+    font-weight:600 !important;
+    &::after{
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border: 2px solid #333;
+        border-left: 0;
+        border-top: 0;
+        content: '';
+        transform: rotate(45deg);
+        top: 16px;
+        right: 0;
+    }
+  }
+  .navlinks--wrapper
+  {
     display: flex;
     justify-content: space-between;
-    padding:6px 0px;
-    
-}
-.topbar--contactinfo--container
-{
-    gap:30px;
-}
-.firstcontact--info
-{
     align-items: center;
-    gap:10px;
-  p 
-     {
-        font-size: 15px;
+    color:var( --whitecolor);
+    .dropdown 
+    {
+      button 
+      {
+        background-color: transparent;
+        border:none
+      }
+    }
+    .dropdown 
+    {
+      border:none;
+      outline:none;
+    
+      
+      background: transparent;
+      button 
+      {
+        font-size: 20px;
+        font-family: var(--font-librecalson);
+        color:var( --whitecolor);
+        letter-spacing: 0.8px;
+        padding:1px;
+
+
+      }
+      span 
+      {
+        font-size: 14px;
+        padding-left: 5px;
+      }
+    }
+    .navlink--lists
+    {
+      p 
+      {
+        margin:0px;
+        font-size: 20px;
         font-family: var(--font-librecalson);
         font-weight: 500;
-        letter-spacing: 0.7px;
-        margin:0px
-     }
-     
+      }
+    }
+   .navbar-nav
+   {
+    display: flex;
+    justify-content: end;
+   }
+  }
+  .lastsection
+  {
+    display: flex;
+    justify-content: end;
+  }
+  .navbar-brand 
+  {
+    img 
+    {
+      height: 80px;
+    }
+  }
+  
 }
-.topbar--icons
-{
-font-size: 22px;
-align-items: center;
-font-weight: 600;
+.sections--header h2{
+  display: inline-block;
+  position: relative;
 }
-.topbar--socialinfo--container
-{
-          display   : flex;
-          gap:40px;
-}
-.navbar--wrapper
-{
-  background-color: transparent;
-}
-.navbar--row
-{
-    width: 100%;
-}
-.dropdown-toggle::after
-{
-    display: none ;
+.sections--header h2:after {
+  content: '';
+  height: 30px;
+  width: 100%;
+  background-image: url(../Images/titlebg.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 0;
+  background-position: right;
+  bottom: -30px;
 }

@@ -1,0 +1,27 @@
+.destinationpage--wrapper 
+{
+   
+   background-image: url('../Images/Destination.png');
+   height: 500px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+   position: relative;
+   .destinationpage--content 
+   {
+    position: absolute;
+    bottom: 30px;
+    left:50%;
+    transform: translateX(-50%);
+   
+    h1 
+    {
+         color: var(--whitecolor );
+        text-align: center;
+        font-family: var(--font-librecalson);
+        font-size: 60px;
+    }
+   }
+
+
+}
