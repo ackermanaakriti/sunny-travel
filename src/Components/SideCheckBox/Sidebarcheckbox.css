@@ -1,78 +1,74 @@
-
-.sidecheckboxbar--container
-{
-   flex: 0 0 calc(386px - 50px);
+.sidecheckboxbar--container {
+    flex: 0 0 calc(386px - 50px);
     border-radius: 15px;
-    border:1px solid  #4A4A4A
+    border: 1px solid #4A4A4A
 }
-.form--dropdown--Region
-{
-   
-   
-    
-    .form--headers
-    {
+
+.form--dropdown--Region {
+
+
+
+    .form--headers {
         text-align: center;
         font-size: 22px;
         font-family: var(--font--poppins);
         font-weight: 600;
     }
 }
-.form--headers--region
-{
+
+.form--headers--region {
     text-align: left;
     font-size: 22px;
     font-family: var(--font--poppins);
     font-weight: 600;
-    p 
-    {
-        margin:10px;
-    }
-}
-.form--headers--activities
-{
-    text-align: left;
-    font-size: 22px;
-    font-family: var(--font--poppins);
-    font-weight: 600;
-    border-top: 1px solid gray;
-    p 
-    {
-        margin:10px;
-    }
-}
-.form--headers--budget
-{
-    text-align: left;
-    font-size: 22px;
-    font-family: var(--font--poppins);
-    font-weight: 600;
-    border-top: 1px solid gray;
-    p 
-    {
-        margin:10px;
+
+    p {
+        margin: 10px;
     }
 }
 
-.form--checkboxes--list
-{
-    border-top:1px solid gray;
-    padding:10px 0px;
-    .form--checkbox
-    {
-        padding:  10px 20px;
-     label 
-     {
-        font-size: 22px;
-        font-family: var(--font--poppins);
-     }
-    
+.form--headers--activities {
+    text-align: left;
+    font-size: 22px;
+    font-family: var(--font--poppins);
+    font-weight: 600;
+    border-top: 1px solid gray;
+
+    p {
+        margin: 10px;
+    }
+}
+
+.form--headers--budget {
+    text-align: left;
+    font-size: 22px;
+    font-family: var(--font--poppins);
+    font-weight: 600;
+    border-top: 1px solid gray;
+
+    p {
+        margin: 10px;
+    }
+}
+
+.form--checkboxes--list {
+    border-top: 1px solid gray;
+    padding: 10px 0px;
+
+    .form--checkbox {
+        padding: 10px 20px;
+
+        label {
+            font-size: 22px;
+            font-family: var(--font--poppins);
+        }
+
         input[type="checkbox"] {
-            transform: scale(1.5); 
-            margin-right: 10px; 
-          }
+            transform: scale(1.5);
+            margin-right: 10px;
+        }
 
-     
+
 
     }
 }

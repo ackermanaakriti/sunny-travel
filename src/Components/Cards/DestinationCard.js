@@ -6,7 +6,7 @@ import './Card.css'
 const DestinationCard = ({props}) => {
   return (
     <>
-    <div className='destinationcard--container'>
+    <div className='destinationcard--container col-md-4'>
       <div className='dest-wrap'>
      <div className='destinationcard--img'>
         <img src={img} alt=''/>
