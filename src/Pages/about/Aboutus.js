@@ -4,6 +4,7 @@ import "./style.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+
 import {
   Button,
   Col,
@@ -57,6 +58,14 @@ const Aboutus = () => {
   return (
     <Layout>
       <section className="about-page">
+        <div className="aboutuspage--wrapper">
+          <div className="aboutusoverlay">
+            
+          </div>
+          <div className="aboutuspage--content">
+            <h1>About us</h1>
+          </div>
+        </div>
         <div className="about-bar">
           <Container>
             <ListGroup as="ul" horizontal>

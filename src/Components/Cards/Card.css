@@ -1,22 +1,36 @@
+.slider-topvacation-container {
+    /* .slick-list{
+        /* margin: 0 -15px;
+    }
+    .slick-slide
+    {
+      
+        margin:15px;
+        position: relative;
+        border-radius: 12px;
+       
+       
+    }  */
+}
 .topdestivacation--container {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height:240px;
+    padding: 0 10px;
+    position: relative;
 
-    height: 100%;
+    /* height: 100%; */
     border-radius: 12px;
-
+/* margin: 0 15px; */
 }
 
 .topdestivacation--img {
-
+height: 100%;
+overflow: hidden;
     img {
-        position: absolute;
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 12px;
-        overflow: hidden;
 
     }
 
@@ -248,15 +262,16 @@
 .destinationcard--container {
 
 
-    position: relative;
-    overflow: hidden;
+    
     /* flex: 0 0 calc(33.33% - 30px); */
 
 
     .dest-wrap {
-        padding: 20px;
+        padding: 14px;
         border: 2px #DADADA solid;
         border-radius: 15px;
+        position: relative;
+    overflow: hidden;
     }
 
     .destinationcard--img {
@@ -298,7 +313,7 @@
         color: var(--primary-color);
         position: absolute;
         top: 38px;
-        left: -38px;
+        left: -40px;
         padding: 2px 60px;
         font-size: 18px;
         font-weight: 600;
@@ -307,8 +322,8 @@
     }
 
     .destinationcard--content {
-        h1 {
-            font-size: 24px;
+        h4 {
+          
             font-family: var(--font--poppins);
             color: var(--primary-color);
             font-weight: 600 !important;
@@ -322,10 +337,16 @@
         p {
             color: var(--sub--header);
             margin: 4px;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 22px;
             font-family: var(--font-family-pop);
         }
+    }
+    .cardFooter
+    {
+        padding-top: 5px;
+        display: flex;
+        justify-content: space-between;
     }
 }
 

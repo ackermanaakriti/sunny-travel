@@ -7,9 +7,10 @@ const FeedBack = () => {
   return (
    <div className='feedback--container'>
     <div className='sections--wrapper'>
-   
-        <Row>
+  
+     <Row>
             <Col xs={6}>
+                
             <div className='feedback--image'>
                 <img src={man} alt='a man '/>
             </div>
@@ -19,13 +20,18 @@ const FeedBack = () => {
                 <h2>
                     Drop your Feedback here
                 </h2>
-            <FeedbackForm/>
+                <Container>
+                <FeedbackForm/>
+                </Container>
+            
             </div>
            
             </Col>
 
         </Row>
 
+   
+       
     </div>
    
    </div>

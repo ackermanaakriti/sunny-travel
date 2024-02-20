@@ -74,7 +74,10 @@ function Navbarr() {
                    
                  
                     <div className='navlink--lists'>
+                      <Link to='/aboutus'>
                       <p>{navlinks[4].name}</p>
+                      </Link>
+                     
                     </div>
                     <div className='navlink--lists'>
                       <p>{navlinks[5].name}</p>
