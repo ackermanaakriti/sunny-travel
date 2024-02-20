@@ -3,7 +3,6 @@
 {
   position: absolute;
   width: 100%;
-  max-width: 1920px;
   z-index: 99;
 }
 .hottopbar--wrapper {
@@ -113,7 +112,7 @@
       background: transparent;
       button 
       {
-        font-size: 18px;
+        font-size: 20px;
         font-family: var(--font-librecalson);
         color:var( --whitecolor);
         letter-spacing: 0.8px;
@@ -132,16 +131,21 @@
       p 
       {
         margin:0px;
-        font-size: 18px;
+        font-size: 20px;
         font-family: var(--font-librecalson);
         font-weight: 500;
       }
     }
    .navbar-nav
-    {
-      display: flex;
-      justify-content: end;
-    }
+   {
+    display: flex;
+    justify-content: end;
+   }
+  }
+  .lastsection
+  {
+    display: flex;
+    justify-content: end;
   }
   .navbar-brand 
   {
@@ -151,4 +155,19 @@
     }
   }
   
+}
+.sections--header h2{
+  display: inline-block;
+  position: relative;
+}
+.sections--header h2:after {
+  content: '';
+  height: 30px;
+  width: 100%;
+  background-image: url(../Images/titlebg.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 0;
+  background-position: right;
+  bottom: -30px;
 }

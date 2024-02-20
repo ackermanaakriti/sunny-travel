@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { navlinks } from '../Data/navlinks';
 import logo from '../Images/logooo.png'
 import Topbar from './Topbar';
+import {Link} from 'react-router-dom'
 function Navbarr() {
   const [navlinkss, setnavlinks] = useState(navlinks)
   console.log(navlinkss)
@@ -32,12 +33,18 @@ function Navbarr() {
                 <Col xs={8}>
                   <Nav className="me-auto navlinks--wrapper">
                     <div className='navlink--lists'>
+                      <Link to='/'>
                       < p>{navlinks[0].name}</p>
+                      </Link>
                     </div>
                     <Dropdown>
+                    <Link path='/destination'>
                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                
                   {navlinks[1].name} <span><FontAwesomeIcon icon={faChevronDown} /></span>
+                 
                   </Dropdown.Toggle>
+                  </Link>
                        <Dropdown.Menu>
                     <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -77,8 +84,8 @@ function Navbarr() {
 
                   </Nav>
                 </Col>
-                <Col className='col-2 ' xs={2}>
-                  <Nav className='coll'>
+                <Col className='lastsection' xs={2}>
+                  <Nav className='colll'>
                     <button>hello</button>
                   </Nav></Col>
               </Row>

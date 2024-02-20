@@ -8,9 +8,21 @@
     --whitecolor:#ffffff;
     --subheader--color:#4A4A4A;
     --blackcolor:#292929;
+    --graycolor:#797979;
+    --fikagray:#DADADA-;
    
     --font-librecalson: "Libre Caslon Text", serif;
     --font--inter:"Inter", sans-serif;
     --font--poppins :"Poppins", sans-serif;
     
+}
+.container{
+    max-width: 1643px;
+}
+.sidecheckbox--containerrr
+{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+    margin-top:56px;
 }

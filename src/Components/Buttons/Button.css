@@ -1,0 +1,14 @@
+.exploremore--btn
+{
+    button 
+    {
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 7px;
+        color:var(--whitecolor);
+        font-family: var(--font-poppins);
+        font-size: 18px;
+        padding: 12px 26px;
+
+    }
+}
