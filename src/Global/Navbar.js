@@ -4,12 +4,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown,faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { navlinks } from '../Data/navlinks';
 import logo from '../Images/logooo.png'
 import Topbar from './Topbar';
 import {Link} from 'react-router-dom'
+import ExploreMoreBtn from '../Components/Buttons/ExploreMoreBtn';
 function Navbarr() {
   const [navlinkss, setnavlinks] = useState(navlinks)
   console.log(navlinkss)
@@ -17,86 +18,45 @@ function Navbarr() {
     <>
       <div className='navbar--main--wrapper'>
         <Topbar />
-        <Navbar collapseOnSelect expand="lg" className="navbar--wrapper">
-          <Container>
+        <div className='navbar--container'>
+          <div className='navbar--overlay'></div>
+         
+            <Container>
+              <Row>
+              <nav>
+                <Col md={1}>
+                  <div className='nav-logo'>
+                    <img src={logo} alt='sunny-travel-logo'/>
 
-
-
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Row className='navbar--row'>
-                <Col xs={2}>
-                  <Navbar.Brand href="#home">
-                    <img src={logo} alt='logo' />
-                  </Navbar.Brand></Col>
-
-                <Col xs={8}>
-                  <Nav className="me-auto navlinks--wrapper">
-                    <div className='navlink--lists'>
-                      <Link to='/'>
-                      < p>{navlinks[0].name}</p>
-                      </Link>
-                    </div>
-                    <Dropdown>
-                    <Link path='/destination'>
-               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                
-                  {navlinks[1].name} <span><FontAwesomeIcon icon={faChevronDown} /></span>
-                 
-                  </Dropdown.Toggle>
-                  </Link>
-                       <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                     <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                         </Dropdown.Menu>
-                       </Dropdown>
-                       <Dropdown>
-               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  {navlinks[2].name} <span><FontAwesomeIcon icon={faChevronDown} /></span>
-                  </Dropdown.Toggle>
-                       <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                     <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                         </Dropdown.Menu>
-                       </Dropdown>
-                       <Dropdown>
-               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  {navlinks[3].name} <span><FontAwesomeIcon icon={faChevronDown} /></span>
-                  </Dropdown.Toggle>
-                       <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                     <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                         </Dropdown.Menu>
-                       </Dropdown>
-                   
-                 
-                    <div className='navlink--lists'>
-                      <Link to='/aboutus'>
-                      <p>{navlinks[4].name}</p>
-                      </Link>
-                     
-                    </div>
-                    <div className='navlink--lists'>
-                      <p>{navlinks[5].name}</p>
-                    </div>
-
-
-
-                  </Nav>
+                  </div>
                 </Col>
-                <Col className='lastsection' xs={2}>
-                  <Nav className='colll'>
-                    <button>hello</button>
-                  </Nav></Col>
+                <Col md={9}>
+                  <div className='navlinks'>
+                  <ul>
+                    <Link style={{textDecoration:'none',}} to='/'>  <li>Home</li></Link>
+                    <Link to='/destination'>  <li>Destination</li> <span><FontAwesomeIcon icon={faChevronDown} /></span></Link>
+                    <Link to='/activity'>  <li>Activities</li> <span><FontAwesomeIcon icon={faChevronDown} /></span></Link>
+                    <Link to='/packages'>  <li>Packages</li> <span><FontAwesomeIcon icon={faChevronDown} /></span></Link>
+                    <Link style={{textDecoration:'none',}} to='/aboutus'>  <li>About Us</li></Link>
+                    <Link style={{textDecoration:'none',}} to='/activitydetail'>  <li>Contact Us</li></Link>
+
+                  </ul>
+                  </div>
+                  
+                </Col>
+                <Col md={2}>
+                  <div className='navbtn'>
+                   <button>Book Now <span><FontAwesomeIcon icon={faPaperPlane} /></span>  </button>
+                   
+                  
+                  </div>
+                </Col>
+                </nav>
               </Row>
-            </Navbar.Collapse>
+            </Container>
+       
 
-
-          </Container>
-        </Navbar>
+        </div>
       </div>
     </>
 

@@ -21,7 +21,6 @@ const ActivityDetail = () => {
                         <div className='activitydetail--'>
                         <Container>
                             <Row gx={5}>
-                                
                                     <Col  md={3}>
                                         <SidebarForm />
                                     </Col>

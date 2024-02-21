@@ -6,8 +6,9 @@ import { region } from "../../Data/Checkboxes";
 import "./pagination.css";
 import { Row } from "react-bootstrap";
 import DestinationCard from "../Cards/DestinationCard";
+import PackageCard from "../Cards/PackageCard";
 
-const DestinationPagintion = () => {
+const PackagePagintion = () => {
   const cardsPerPage = 2; // Number of cards per page
   const [currentPage, setCurrentPage] = useState(1);
   const totalCards = region.length;
@@ -27,7 +28,7 @@ const DestinationPagintion = () => {
         <div className="pagination--container">
           <Row className="gy-4"> 
             {region.map((item) => (
-            <DestinationCard/>
+           <PackageCard/>
             ))}
           </Row>
 
@@ -89,4 +90,4 @@ const DestinationPagintion = () => {
   );
 };
 
-export default DestinationPagintion;
+export default PackagePagintion;

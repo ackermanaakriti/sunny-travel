@@ -1,6 +1,6 @@
 import React from 'react'
 import OurTrendingPackCard from '../../Components/Cards/OurTrendingPackCard'
-import { Container } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import { ourtrendigpac } from '../../Data/Card'
 import ExploreMoreBtn from '../../Components/Buttons/ExploreMoreBtn'
 
@@ -17,13 +17,17 @@ const OurTrendingPackages = () => {
         </div>
 
         <div className='ourtrendingpac--contents'>
-         {
+          <Row gy={4}>
+          {
             ourtrendigpac.map((item)=>
             (
-             <OurTrendingPackCard/>
+              <Col md={4}> <OurTrendingPackCard/></Col>
+            
             )
            )
          }
+          </Row>
+         
           
         </div>
         <div className='topvacationdesti--btn'>

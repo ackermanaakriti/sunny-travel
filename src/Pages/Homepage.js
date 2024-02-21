@@ -9,7 +9,6 @@ import TopVacationDesti from '../Sections/HomepageSection/TopVacationDesti'
 import ExploreActivities from '../Sections/HomepageSection/ExploreActivities'
 import Majesticpeaks from '../Sections/HomepageSection/Majesticpeaks'
 import OurTrendingPackages from '../Sections/HomepageSection/OurTrendingPackages'
-import FeedBack from '../Sections/HomepageSection/FeedBack'
 
 const Homepage = () => {
   return (
@@ -20,7 +19,7 @@ const Homepage = () => {
   <ExploreActivities/>
   <Majesticpeaks/>
   <OurTrendingPackages/>
-  <FeedBack/>
+ 
    </Layout>
   )
 }

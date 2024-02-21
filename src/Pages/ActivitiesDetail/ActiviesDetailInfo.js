@@ -1,6 +1,9 @@
 import React from 'react'
 import './Activitydetail.css'
 import ActivitiesPhotoSwiper from '../../Components/Swiper/ActivitiesPhotoCarousel'
+import { region } from '../../Data/Checkboxes'
+import { Col,Row} from 'react-bootstrap'
+import ActivitypageCard from '../../Components/Cards/ActivitypageCard'
 
 const ActiviesDetailInfo = () => {
   return (
@@ -37,6 +40,19 @@ const ActiviesDetailInfo = () => {
         Pokhara boasts stunning landscapes with the majestic Annapurna mountain range as a backdrop. Its stable thermals and reliable weather conditions make it one of the best places in the world for paragliding.
  
         </p>
+    </div>
+
+    <div className='recommended-acti'>
+      <h2>Discover Paragliding Adventures
+in Alternate Destinations</h2>
+         <div className='recommended--acticard'>
+        
+         <Row className="gy-4"> 
+            {region.map((item) => (
+             <ActivitypageCard/>
+            ))}
+          </Row>
+         </div>
     </div>
   </div>
   </>

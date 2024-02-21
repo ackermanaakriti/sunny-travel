@@ -231,11 +231,11 @@
 }
 .ourtrendingpac--contents
 {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap:30px;
-    padding-top: 80px;
+    padding-top: 80px; */
 }
 .formfeedback--container
 {

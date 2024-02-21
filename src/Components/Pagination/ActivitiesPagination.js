@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import DestinationCard from "../Cards/PackageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { region } from "../../Data/Checkboxes";
 import "./pagination.css";
 import { Row } from "react-bootstrap";
-import DestinationCard from "../Cards/DestinationCard";
+import ActivitypageCard from "../Cards/ActivitypageCard";
 
-const DestinationPagintion = () => {
+const ActivitiesPagination = () => {
   const cardsPerPage = 2; // Number of cards per page
   const [currentPage, setCurrentPage] = useState(1);
   const totalCards = region.length;
@@ -23,11 +24,11 @@ const DestinationPagintion = () => {
 
   return (
     <>
-      <div className="destinationpagination--cards">
+      <div className="activitiespagination--cards">
         <div className="pagination--container">
           <Row className="gy-4"> 
             {region.map((item) => (
-            <DestinationCard/>
+             <ActivitypageCard/>
             ))}
           </Row>
 
@@ -89,4 +90,4 @@ const DestinationPagintion = () => {
   );
 };
 
-export default DestinationPagintion;
+export default ActivitiesPagination;

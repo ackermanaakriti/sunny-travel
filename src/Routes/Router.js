@@ -6,6 +6,8 @@ import DetailofTrip from "../Pages/detailsPages/DetailofTrip";
 import Aboutus from "../Pages/about/Aboutus";
 import ServicePage from "../Pages/services/ServicePage";
 import ActivityDetail from "../Pages/ActivitiesDetail/ActivityDetail";
+import Acitivitypage from "../Pages/Acitivitypage";
+import Packages from "../Pages/Pacakagepage";
 const Routers = () => {
   return (
     <>
@@ -16,6 +18,10 @@ const Routers = () => {
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/services" element={<ServicePage/>} />
         <Route path="/activitydetail" element={<ActivityDetail/>} />
+        <Route path="/activity" element={<Acitivitypage/>} />
+        <Route path="/packages" element={<Packages/>} />
+
+   
 
 
       </Routes>

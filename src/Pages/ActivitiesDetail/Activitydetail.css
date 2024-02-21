@@ -85,3 +85,16 @@
 {
     padding-left: 40px;
 }
+.recommended-acti
+{
+    margin-top: 4rem;
+    h2 
+    {
+        font-size: 45px;
+        font-weight: 600 !important;
+        color: var(--primary-color);
+        margin-bottom: 40px;
+      
+
+    }
+}

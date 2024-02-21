@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Col, Container } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import "./Sidebarcheckbox.css";
 import { region } from "../../Data/Checkboxes";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown ,faMagnifyingGlass,faStar} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TitleBox from "../TitleBox";
+import Cardbuttons from "../Buttons/Cardbuttons";
 
 const SidecheckBoxBar = () => {
   const [regionVis, setRegionVis] = useState(null);
@@ -12,7 +13,13 @@ const SidecheckBoxBar = () => {
   const [budgetVis, setbudgetVis] = useState(null);
   return (
     <>
-      <Col md={3}>
+      
+      
+      <div className="searchbox--sidebar">
+            <input type="text" placeholder="Search" />
+            <span><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
+          </div>
+     
         <div className="sidecheckboxbar--container">
          
           <form>
@@ -95,7 +102,38 @@ const SidecheckBoxBar = () => {
             </div>
           </form>
         </div>
-      </Col>
+        <div className="rating--container">
+          <div className="rating--info">
+            <h5>Rating</h5>
+
+            <span>
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            </span>
+            <button>Clear Filter</button>
+            
+          </div>
+          <div className="days--container">
+            <div className="days--info">
+              <h5>Days</h5>
+              <Row>
+                <Col md={6}>
+                  <label>Min Days</label>
+                   <input/></Col>
+                <Col md={6}> 
+                <label>Max Days</label>
+                <input/></Col>
+              </Row>
+            </div>
+          </div>
+        </div>
+        <div className="submits">
+          <Cardbuttons value='Submit'/>
+          <button className="cleaarbtn">Clear Filter</button>
+        </div>
+    
     </>
   );
 };
