@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import Layout from "../../Layout";
 import DetailsSideBarLayout from "../../Components/Layouts/detailSidebarLayout";
-import detailsPage from "../../Data/detailsPages";
+import detailsPage from "../../Global/Data/detailsPages";
 import "./detailsPage.css";
 import DetailsContent from "../../Components/DetailsPage/DetailsContent/DetailsContent";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";

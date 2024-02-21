@@ -1,6 +1,6 @@
 import React from 'react'
 import Cardbuttons from '../Buttons/Cardbuttons'
-import img from '../../Images/dest.png'
+import img from '../../Global/Images/dest.png'
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

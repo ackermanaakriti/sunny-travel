@@ -1,13 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Destination from "../Pages/Destination";
-import Homepage from "../Pages/Homepage";
-import DetailofTrip from "../Pages/detailsPages/DetailofTrip";
-import Aboutus from "../Pages/about/Aboutus";
-import ServicePage from "../Pages/services/ServicePage";
-import ActivityDetail from "../Pages/ActivitiesDetail/ActivityDetail";
-import Acitivitypage from "../Pages/Acitivitypage";
-import Packages from "../Pages/Pacakagepage";
+import Destination from "../../Pages/Destination";
+import Homepage from "../../Pages/Homepage";
+import DetailofTrip from "../../Pages/detailsPages/DetailofTrip";
+import Aboutus from "../../Pages/about/Aboutus";
+import ServicePage from "../../Pages/services/ServicePage";
+import ActivityDetail from "../../Pages/ActivitiesDetail/ActivityDetail";
+import Acitivitypage from "../../Pages/Acitivitypage";
+import Packages from "../../Pages/Pacakagepage";
+import SinglePlace from "../../Pages/SinglePlace";
 const Routers = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const Routers = () => {
         <Route path="/activitydetail" element={<ActivityDetail/>} />
         <Route path="/activity" element={<Acitivitypage/>} />
         <Route path="/packages" element={<Packages/>} />
+        <Route path="/singleplace" element={<SinglePlace/>} />
 
    
 

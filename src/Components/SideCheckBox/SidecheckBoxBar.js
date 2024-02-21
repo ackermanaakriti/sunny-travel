@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import "./Sidebarcheckbox.css";
-import { region } from "../../Data/Checkboxes";
+import { region } from "../../Global/Data/Checkboxes";
 import { faChevronDown ,faMagnifyingGlass,faStar} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TitleBox from "../TitleBox";

@@ -3,7 +3,7 @@ import "./sidebar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { InquiryForm } from "../../../Forms/InquiryForm";
+import { InquiryForm } from "../../Forms/InquiryForm";
 const detailsSideBar = () => {
   return (
     <>

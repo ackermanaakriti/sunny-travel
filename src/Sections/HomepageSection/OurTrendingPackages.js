@@ -1,7 +1,7 @@
 import React from 'react'
 import OurTrendingPackCard from '../../Components/Cards/OurTrendingPackCard'
 import { Col, Container, Row } from 'react-bootstrap'
-import { ourtrendigpac } from '../../Data/Card'
+import { ourtrendigpac } from '../../Global/Data/Card'
 import ExploreMoreBtn from '../../Components/Buttons/ExploreMoreBtn'
 
 const OurTrendingPackages = () => {

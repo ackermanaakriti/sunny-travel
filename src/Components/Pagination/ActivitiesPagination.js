@@ -3,7 +3,7 @@ import DestinationCard from "../Cards/PackageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { region } from "../../Data/Checkboxes";
+import { region } from "../../Global/Data/Checkboxes";
 import "./pagination.css";
 import { Row } from "react-bootstrap";
 import ActivitypageCard from "../Cards/ActivitypageCard";

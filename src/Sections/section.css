@@ -47,7 +47,7 @@
 }
 .heropage--wrapper
 {
-    background-image: url('../Images/homeimg.png');
+    background-image: url('../Global/Images/homeimg.png');
     height: 700px;
     background-repeat: no-repeat;
     position: relative;
@@ -247,7 +247,7 @@
  height: 500px;
  margin:auto;
  justify-content: center;
- background-image: url(../Images/Rectangle\ 345.png);
+ background-image: url(../Global/Images/Rectangle\ 345.png);
  background-size: cover;
     img 
     {

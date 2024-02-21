@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import './Swiper.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight ,faArrowLeft} from "@fortawesome/free-solid-svg-icons";
-import { topdesti } from "../../Data/DestinationData";
+import { topdesti } from "../../Global/Data/DestinationData";
 import TopDestinationVacCard from "../Cards/TopDestinationVacCard";
 
 const CustomPrevArrow = (props) => {

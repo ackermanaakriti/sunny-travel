@@ -5,7 +5,7 @@
 }
 .activitydetail--wrapper
 {
-    background-image: url('../../Images/activitydetail.png');
+    background-image: url('../../Global/Images/activitydetail.png');
     height: 420px;
     background-size: cover;
     position: relative;

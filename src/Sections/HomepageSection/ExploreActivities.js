@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row ,Col} from 'react-bootstrap'
-import map from '../../Images/mapimage.png'
-import heli from '../../Images/heli.png'
-import mountain from '../../Images/mountain.png'
+import map from '../../Global/Images/mapimage.png'
+import heli from '../../Global/Images/heli.png'
+import mountain from '../../Global/Images/mountain.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPersonWalking } from '@fortawesome/free-solid-svg-icons'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane,faUser,faEnvelope,faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import nepalflag from '../../Images/nepal.png'
+import nepalflag from '../../Global/Images/nepal.png'
 import * as Yup from 'yup';
 
 import './Sidebarform.css'
