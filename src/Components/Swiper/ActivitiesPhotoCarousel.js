@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container } from "react-bootstrap";
 import './Swiper.css'
-import img from '../../Images/paragliding.png'
+import img from '../../Global/Images/paragliding.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight ,faArrowLeft} from "@fortawesome/free-solid-svg-icons";
-import { topdesti } from "../../Data/DestinationData";
+import { topdesti } from "../../Global/Data/DestinationData";
 
 const CustomPrevArrow = (props) => {
   const { onClick } = props;

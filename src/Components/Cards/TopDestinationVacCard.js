@@ -1,5 +1,5 @@
 import React from 'react'
-import pkhara from '../../Images/pokhara.png'
+import pkhara from '../../Global/Images/pokhara.png'
 import './Card.css'
 
 const TopDestinationVacCard = () => {

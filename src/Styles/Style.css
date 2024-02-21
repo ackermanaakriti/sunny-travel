@@ -257,7 +257,7 @@
   content: '';
   height: 30px;
   width: 100%;
-  background-image: url(../Images/titlebg.png);
+  background-image: url(../Global/Images/titlebg.png);
   position: absolute;
   background-repeat: no-repeat;
   right: 0;

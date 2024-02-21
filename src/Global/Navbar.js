@@ -6,8 +6,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown,faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import { navlinks } from '../Data/navlinks';
-import logo from '../Images/logooo.png'
+import { navlinks } from './Data/navlinks';
+import logo from '../Global/Images/logooo.png'
 import Topbar from './Topbar';
 import {Link} from 'react-router-dom'
 import ExploreMoreBtn from '../Components/Buttons/ExploreMoreBtn';

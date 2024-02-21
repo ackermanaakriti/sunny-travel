@@ -1,5 +1,5 @@
 import React from 'react'
-import ele from '../../Images/elephant.png'
+import ele from '../../Global/Images/elephant.png'
 import './Card.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'

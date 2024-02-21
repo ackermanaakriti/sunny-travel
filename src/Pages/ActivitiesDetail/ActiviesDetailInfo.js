@@ -1,7 +1,7 @@
 import React from 'react'
 import './Activitydetail.css'
 import ActivitiesPhotoSwiper from '../../Components/Swiper/ActivitiesPhotoCarousel'
-import { region } from '../../Data/Checkboxes'
+import { region } from '../../Global/Data/Checkboxes'
 import { Col,Row} from 'react-bootstrap'
 import ActivitypageCard from '../../Components/Cards/ActivitypageCard'
 

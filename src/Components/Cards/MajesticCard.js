@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../Images/first.png'
+import img from '../../Global/Images/first.png'
 
 const MajesticCard = () => {
   return (

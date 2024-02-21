@@ -5,7 +5,7 @@
 }
 .packagespage--wrapper
 {
-   background-image: url('../Images/packbg.png');
+   background-image: url('../Global/Images/packbg.png');
    height: 500px;
    background-repeat: no-repeat;
    background-size: cover;
@@ -41,7 +41,7 @@
 .destinationpage--wrapper 
 {
    
-   background-image: url('../Images/Destination.png');
+   background-image: url('../Global/Images/Destination.png');
    height: 500px;
    background-repeat: no-repeat;
    background-size: cover;
@@ -78,7 +78,7 @@
 }
 .activitypage--wrapper
 {
-   background-image: url('../Images/activitiesbg.png');
+   background-image: url('../Global/Images/activitiesbg.png');
    height: 425px;
    background-repeat: no-repeat;
    background-size: cover;
@@ -118,7 +118,7 @@
 .services--wrapper 
 {
    
-   background-image: url('../Images/servicesbg.png');
+   background-image: url('../Global/Images/servicesbg.png');
    height: 500px;
    background-repeat: no-repeat;
    background-size: cover;
@@ -151,4 +151,38 @@
    }
 
 
+}
+.singleplace--wrapper
+{
+   background-image: url('../Global/Images/activitiesbg.png');
+   height: 425px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+ .singleplaceoverlay
+ {
+   position: relative;
+      top:0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(23, 23, 23, 0.336);
+
+ }  
+ .singleplace--content
+ {
+   position: absolute;
+   bottom: 30px;
+ left:50%;
+ transform: translateX(-50%);
+
+ h1 
+ {
+      color: var(--whitecolor );
+     text-align: center;
+     font-family: var(--font-librecalson);
+     font-size: 60px;
+     font-weight: 600;
+ }
+ }
 }

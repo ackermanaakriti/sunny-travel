@@ -156,7 +156,7 @@ h6 {
 .aboutuspage--wrapper 
 {
    
-   background-image: url('../../Images/aboutsbg.png');
+   background-image: url('../../Global/Images/aboutsbg.png');
    height: 500px;
    background-repeat: no-repeat;
    background-size: cover;
@@ -169,7 +169,7 @@ h6 {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(23, 23, 23, 0.36);
+    background-color: rgba(23, 23, 23, 0.39);
    }
    .aboutuspage--content
    {
@@ -223,8 +223,7 @@ h6 {
         position: absolute;
         top: 100%;
         right: 0;
-        background: url("./../../../public/images/svg/inner-heading.svg")
-          no-repeat center;
+       
         background-size: contain;
         content: "";
         width: 200px;

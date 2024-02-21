@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../Images/pokhara.png'
+import img from '../../Global/Images/pokhara.png'
 import './Card.css'
 import ExploreMoreBtn from '../Buttons/ExploreMoreBtn'
 import Cardbuttons from '../Buttons/Cardbuttons'

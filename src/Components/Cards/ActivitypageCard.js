@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card.css'
-import img from '../../Images/activitytwo.png'
+
+import img from '../../Global/Images/activityone.png'
 import { Col } from 'react-bootstrap'
 
 const ActivitypageCard = () => {
