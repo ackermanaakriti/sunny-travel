@@ -292,3 +292,191 @@
         }
     }
 }
+
+.booking-page {
+    .booking-banner {
+        height: 300px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            background: rgba(65, 65, 65, 0.56);
+
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            content: "";
+        }
+
+        h1 {
+            color: var(--white);
+            letter-spacing: -0.02rem;
+            font-size: 44px;
+            margin-bottom: 30px;
+            font-weight: 600;
+
+            b {
+                color: var(--primary-lighter);
+                font-weight: 600;
+            }
+        }
+
+        .banner-img {
+            position: absolute;
+            inset: 0;
+            margin-bottom: 0;
+            z-index: -1;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+
+    }
+
+    .booking-form-wrapper {
+        margin-top: 0;
+        padding: 60px 0;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            background: var(--primary);
+            opacity: 0.03;
+            inset: 0;
+            content: '';
+            z-index: -1;
+            position: absolute;
+        }
+
+
+        .heading-wrapper {
+            text-align: center;
+            margin-bottom: 50px;
+
+            .heading-ext {
+                font-family: var(--poppins);
+                font-size: 18px;
+                color: var(--primary);
+                font-weight: 500;
+                display: inline-block;
+                margin: 0;
+
+                &::after {
+                    background: url(./../../../public/images/heading2.png) no-repeat right;
+                    background-size: contain;
+                }
+            }
+        }
+
+        form {
+            box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.36);
+            padding: 20px;
+            border-radius: 15px;
+            background: var(--white);
+
+            .input-group {
+                background: var(--cream);
+                border: 1px solid rgba(74, 74, 74, 0.5);
+                border-radius: 8px;
+                overflow: hidden;
+                transition: 0.2s ease-in-out border;
+                margin-bottom: 0;
+
+                &:hover,
+                &:focus-within {
+                    border: 1px solid var(--primary);
+
+                    .input-group-text {
+                        [class*="fa-"] {
+                            color: var(--primary);
+                        }
+                    }
+                }
+
+                .input-group-text {
+                    border: 0;
+                    background: var(--white);
+
+                    &.flag-icon {
+                        border-right: 2px solid rgba(74, 74, 74, 0.5);
+                        font-size: 14px;
+                        color: rgba(121, 121, 121, 1);
+
+                        img {
+                            width: 24px;
+                        }
+                    }
+
+                    [class*="fa-"] {
+                        color: rgba(121, 121, 121, 1);
+                    }
+                }
+            }
+
+            .form-label {
+                color: var(--sub-heading);
+                font-weight: 500;
+                font-size: 14px;
+                margin-bottom: 4px;
+
+                .color-red {
+                    color: red;
+                }
+            }
+
+            .form-control {
+                font-size: 14px;
+                border: 0;
+                height: 40px;
+
+                &:placeholder-shown {
+                    color: rgba(121, 121, 121, 1);
+                }
+
+                &:focus {
+                    outline: 0;
+                    box-shadow: none;
+                }
+            }
+
+            .error {
+                font-size: 12px;
+                color: red;
+            }
+
+            select.form-control {
+                -webkit-appearance: listbox !important;
+                margin-right: 10px;
+            }
+
+            textarea.form-control {
+                height: auto;
+            }
+
+            .btn-wrapper {
+                .btn-blue {
+                    padding: 12px 40px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+
+                    [class*="fa-"] {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
