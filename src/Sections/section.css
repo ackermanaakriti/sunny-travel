@@ -239,20 +239,25 @@
 }
 .feedback--container
 {
+    height: 100%;
    .feedback--col
    {
-    background-image: url('../Global//Images/footerr.png');
+    background-image: url('../Global/Images/footerr.png');
+   
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.904);
+    height: 100%;
+  
+  
+    
    
    
    }
     
     .feedback--img
     {
-         height: 700px;
-        padding-top: 50px;
+        height: 740px;
+        padding-top: 80px;
         display: flex;
         justify-content: center;
         img 
@@ -263,8 +268,99 @@
     .feedback--form
     {
         background-color: var(--primary-color);
-        padding:80px 50px;
         height: 100%;
+    
+
+        .feedback--header
+        {
+            margin-left: -8em;
+            padding-top: 50px;
+            display: flex;
+            
+            h2 
+            {
+                color: var(--whitecolor);
+                font-size: 50px;
+                font-family: var(--font-librecalson);
+                position: relative;
+                font-weight: 500 !important;
+                span 
+                {
+                    color: var(--primary-color);
+                }
+            }
+           
+        }
+        .feedback--header h2:after {
+            content: '';
+            height: 30px;
+            width: 100%;
+            background-image: url(../Global/Images/titlebg.png);
+            position: absolute;
+            background-repeat: no-repeat;
+            right: 0;
+            background-position: right;
+            bottom: -30px;
+          }
+     
+      
        
     }
+}
+.whattrav--container
+{
+   
+    .whattrav--content
+    {
+        position: relative;
+        background-image: url('../Global//Images//clientbg.png');
+        background-repeat: no-repeat;
+       
+        padding: 10em 0px;
+        margin-top: 80px;
+        
+    }
+    .testimonialbutton
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 14em;
+       
+        p 
+        {
+            color:var(--primary-color);
+            font-size: 26px;
+            font-family: var(--font--poppins);
+            font-weight: 600  !important;
+            padding: 0px 5em;
+
+        }
+    }
+    /* .testimonialoverlay
+    {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #70c1f73b;
+        top:0;
+        left:0; 
+    } */
+    .testimonial--swip
+    {
+        position: relative;
+       
+        .comma
+        {
+            position: absolute;
+            top:-9em;
+            left:0;
+            
+        }
+       
+    }
+    /* .testimonial--swip:after{
+        background-color: var(--primary-color);
+        position: absolute;
+    } */
+
 }

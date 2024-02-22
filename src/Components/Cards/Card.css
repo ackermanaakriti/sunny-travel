@@ -460,3 +460,58 @@ overflow: hidden;
         }
     }
 }
+.Testimonialcard--wrap{
+    /* width: 700px; */
+    background-color: var(--whitecolor);
+    padding:30px 40px;
+    border-radius: 20px;
+    margin: 0 15px;
+   .testcard--info
+   {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    .client-img
+    {
+   height: 90px;
+   img 
+   {
+    height: 100%;
+    
+   } 
+    }
+   
+    .client--info
+    {
+        h4 
+        {
+            color: var(--primary-color);
+            font-family: var(--font--poppins);
+            font-weight: 600 !important;
+            margin:0px;
+            font-size: 26px;
+        }
+        p 
+        {
+            color:var(--graycolor);
+            font-family: var(--font--poppins);
+            font-weight: 500 !important;
+            font-size: 20px;
+            margin-top: 8px;
+        }
+    }
+   } 
+   .testcard-content
+   {
+    padding-top: 24px;
+    p 
+    {
+        font-family: var(--font--poppins);
+        font-size: 18px;
+        color:var(--sub--header);
+        line-height: 26px;
+        letter-spacing: 0.5px;
+
+    }
+   }
+}

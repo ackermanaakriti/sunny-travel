@@ -1,10 +1,56 @@
+.contactform
+{
+    background-color: var(--whitecolor);
+    padding:30px 30px;
+    border-radius: 15px;
+    .contactbtn-- {
+        position: relative;
+        color: var(--whitecolor);
+        font-size: 20px;
+    
+        text-align: center;
+        padding: 5px 0;
+        background-color: var(--secondary-color);
+        width: 100%;
+        border: none;
+        outline: none;
+    
+        z-index: 3;
+    
+        transition: 0.3s all ease-in;
+        &:hover {
+          background-color: var(--primary-color);
+          transition: 0.3s all ease-in;
+        }
+        &:hover::after {
+          background-color: var(--secondary-color);
+          transition: 0.3s all ease-in;
+        }
+        span {
+          margin-left: 10px;
+        }
+        &::after {
+          background-color: var(--primary-color);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -2;
+          content: "";
+          transition: 0.3s all ease-in;
+          border-top-left-radius: 50px;
+        }
+      }
+      background-color: white;
+}
 .feedbackform--container
 {
     padding:20px;
     background-color: rgb(255, 255, 255);
-    width: 100%;
+    width: 80%;
     border-radius: 15px;
-   margin-left: -15em;
+   margin-left: -12em;
    margin-top: 2em;
    height: 100%;
     
@@ -27,9 +73,9 @@
     label 
     {
         display: block;
-        margin-top:15px;
+        margin-top:20px;
         color:var(--blackcolor);
-        margin-bottom: 3px;
+        margin-bottom: 8px;
         font-weight: 500 !important;
         span 
         {
@@ -80,3 +126,4 @@
         }
     }
 }
+

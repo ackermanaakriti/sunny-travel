@@ -9,6 +9,7 @@ import ActivityDetail from "../../Pages/ActivitiesDetail/ActivityDetail";
 import Acitivitypage from "../../Pages/Acitivitypage";
 import Packages from "../../Pages/Pacakagepage";
 import SinglePlace from "../../Pages/SinglePlace";
+import Contactus from "../../Pages/Contactus";
 const Routers = () => {
   return (
     <>
@@ -22,6 +23,8 @@ const Routers = () => {
         <Route path="/activity" element={<Acitivitypage/>} />
         <Route path="/packages" element={<Packages/>} />
         <Route path="/singleplace" element={<SinglePlace/>} />
+        <Route path="/contact" element={<Contactus/>} />
+
 
    
 

@@ -11,6 +11,7 @@ import Majesticpeaks from '../Sections/HomepageSection/Majesticpeaks'
 import OurTrendingPackages from '../Sections/HomepageSection/OurTrendingPackages'
 import FeedbackForm from '../Components/Forms/FeedbackForm'
 import FeedBacksection from '../Sections/HomepageSection/FeedBacksection'
+import WhatTravelerSay from '../Sections/HomepageSection/WhatTravelerSay'
 
 const Homepage = () => {
   return (
@@ -21,6 +22,7 @@ const Homepage = () => {
   <ExploreActivities/>
   <Majesticpeaks/>
   <OurTrendingPackages/>
+  <WhatTravelerSay/>
  <FeedBacksection/>
  
    </Layout>
