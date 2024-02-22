@@ -1,95 +1,129 @@
-.feedbackform--container
+.contactform
 {
     background-color: var(--whitecolor);
-    width: 50%;
-    min-width: 951px;
-    margin-left: -239px;
-    padding: 31px;
+    padding:30px 30px;
     border-radius: 15px;
-    box-shadow: 0 4 44 0 rgba(4,94, 239,0.36);
+    .contactbtn-- {
+        position: relative;
+        color: var(--whitecolor);
+        font-size: 20px;
+    
+        text-align: center;
+        padding: 5px 0;
+        background-color: var(--secondary-color);
+        width: 100%;
+        border: none;
+        outline: none;
+    
+        z-index: 3;
+    
+        transition: 0.3s all ease-in;
+        &:hover {
+          background-color: var(--primary-color);
+          transition: 0.3s all ease-in;
+        }
+        &:hover::after {
+          background-color: var(--secondary-color);
+          transition: 0.3s all ease-in;
+        }
+        span {
+          margin-left: 10px;
+        }
+        &::after {
+          background-color: var(--primary-color);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -2;
+          content: "";
+          transition: 0.3s all ease-in;
+          border-top-left-radius: 50px;
+        }
+      }
+      background-color: white;
+}
+.feedbackform--container
+{
+    padding:20px;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    border-radius: 15px;
+   margin-left: -12em;
+   margin-top: 2em;
+   height: 100%;
+    
+    .feedback--btn
+    {
+        background-color: var(--primary-color);
+        border:none;
+        outline: none;
+        color: var(--whitecolor);
+        padding:11px 26px;
+        border-radius: 8px;
+        margin-top: 14px;
+      
+        span 
+        {
+            
+            padding-left: 5px;
+        }
+    }
     label 
     {
         display: block;
-        font-family: var(--font--poppins);
-        font-size: 14px;
+        margin-top:20px;
+        color:var(--blackcolor);
+        margin-bottom: 8px;
+        font-weight: 500 !important;
+        span 
+        {
+            color:#ED180A;
+        }
     }
     input 
     {
+        
         width: 100%;
+        padding:5px 15px;
+        border:1px solid var(--blackcolor);
+        border-radius: 5px;;
     }
-   
     select 
     {
         width: 100%;
+        padding:5px 15px;
+        border:1px solid var(--blackcolor);
+        border-radius: 5px;;
+
     }
-    textarea 
+    .error
     {
-        width: 100%;
+        color: red;
+        font-size: 14px;
     }
-    .form--div
+    textarea
     {
-        display: flex;
-        justify-content: space-between;
-        input 
+        width:100%;
+        height: 80px;
+        padding:5px 15px;
+        border:1px solid var(--blackcolor);
+        border-radius: 5px;
+
+    }
+    .input-group
+    {
+        .form-control
         {
-            width: 100%;
+            border:1px solid var(--blackcolor);
+        border-radius:  0px 5px 5px 0px;
+        }
+        .input-group-text
+        {
+            border:1px solid var(--blackcolor);
+            border-radius:  5px 0px 0px 5px;
         }
     }
 }
-.feedbackform--container input {
-    border: 2px #292929 solid;
-    border-radius: 5px;
-  
-}
-.feedbackform--container label{
-    font-size: 18px;
-    color:#292929;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-.feedbackform--container select{
-    font-size: 18px;
-    color:#292929;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-.feedbackform--container input, .feedbackform--container select, .feedbackform--container textarea,.feedbackform--container select{
-    border: 2px #292929 solid;
-    border-radius: 5px;
-   
-    font-size: 18px;
-    padding:0 10px;
-    color: #797979;
-    margin-bottom: 20px;
 
-}
-.feedbackform--container textarea{
-    height: 110px;
-}
-.formfeedback--container h2 {
-    font-size: 50px;
-    font-family: var(--font-librecalson);
-    font-weight: 500;
-    margin-left: -175px;
-    margin-bottom: 79px;
-    padding-top: 37px;
-    display: inline-block;
-    position: relative;
-}
-.formfeedback--container h2:after{
-    content: '';
-    height: 30px;
-    width: 100%;
-    background-image: url(../Images/titlebg.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    right: 0;
-    background-position: right;
-    bottom: -30px;
-}
-.sections--wrapper .row{
-    margin: 0;
-    .col-6{
-        padding: 0;
-    }
-}

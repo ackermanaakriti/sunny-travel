@@ -6,10 +6,7 @@ import {
   AccordionItem,
   Image,
 } from "react-bootstrap";
-import {
-  essentialDetails,
-  itineraryDetails,
-} from "../../../Global/Data/detailsPages";
+import { essentialDetails, itineraryDetails } from "../../../Global/Data/detailsPages";
 
 const Itinerary = () => {
   return (
