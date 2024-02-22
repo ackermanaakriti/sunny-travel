@@ -30,11 +30,9 @@ const FeedbackForm = () => {
 
           email: Yup.string().email('Invalid email').required('Email is required'),
         })}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+        onSubmit={(values)=>
+        {
+          console.log(values,"from feedback");
         }}
       >
         {({ isSubmitting }) => (
