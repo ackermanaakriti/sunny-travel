@@ -1,5 +1,5 @@
 import React from "react";
-import { tripSummary } from "../../Data/detailsPages";
+import { tripSummary } from "../../Global/Data/detailsPages";
 import { Col, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

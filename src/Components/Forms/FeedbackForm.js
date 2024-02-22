@@ -1,7 +1,10 @@
 import React from 'react';
+import flag from '../../Global/Images/nepal.png'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './Form.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 
 const FeedbackForm = () => {
   return (
@@ -38,30 +41,42 @@ const FeedbackForm = () => {
           <Form>
             <div className='feedbackform--container'>
                 <div className='form--div row'>
-            <div class="col-md-6">
-              <label htmlFor="fullname">Full Name</label>
+            <div className="col-md-6">
+              <label htmlFor="fullname">Full Name  <span>*</span></label>
               <Field type="text" name="fullname" placeholder="Eg. John Doe"/>
               <ErrorMessage name="fullname" component="div" className="error" />
             </div>
-            <div class="col-md-6">
-              <label htmlFor="nationality">Nationality</label>
+            <div className="col-md-6">
+              <label htmlFor="nationality">Nationality  <span>*</span></label>
               <Field type="text" name="nationality" />
               <ErrorMessage name="nationality" component="div" className="error" />
             </div>
+   
+
+           <div className='col-md-6'>
+           <label >Phone No <span>*</span></label>
+           <div class="input-group mb-3">
+             
+                        <div className="input-group-prepend">
+                         <span className="input-group-text" id="basic-addon1">
+                            <img src={flag} alt='nepalflag'/>
+                            (+977)
+                         </span>
+                         </div>
+                        <input type="text" className="form-control" placeholder="Phone no" aria-label="Username" aria-describedby="basic-addon1"/>
+                        {/* <span className='iconsp'><FontAwesomeIcon icon={faPhone} /></span> */}
+                         </div>
+           </div>
+           
             
-            <div class="col-md-6">
-              <label htmlFor="phonenumber">Phone Number</label>
-              <Field type="text" name="phonenumber" />
-              <ErrorMessage name="phonenumber" component="div" className="error" />
-            </div>
             
-            <div class="col-md-6">
-              <label htmlFor="email">Email</label>
+            <div className="col-md-6">
+              <label htmlFor="email">Email  <span>*</span></label>
               <Field type="email" name="email"  placeholder="Eg. johndoe@gmail.com" />
               <ErrorMessage name="email" component="div" className="error" />
             </div>
-            <div class="col-md-12">
-              <label htmlFor="email">Trip/Trek</label>
+            <div className="col-md-12">
+              <label htmlFor="email">Trip/Trek  <span>*</span></label>
           <select name='trip'>
             <option>SELECT OPTION</option>
             <option>Annapurna</option>
@@ -70,14 +85,15 @@ const FeedbackForm = () => {
               <ErrorMessage name="trip" component="div" className="error" />
             </div>
 
-            <div class="col-md-12">
-              <label htmlFor="message">Message</label>
+            <div className="col-md-12">
+              <label htmlFor="message">Message  <span>*</span></label>
               <textarea type="text" name="message"></textarea>
               <ErrorMessage name="message" component="div" className="error" placeholder=""/>
             </div>
             <div class="col-md-4">
-            <button type="submit" disabled={isSubmitting}>
-              Submit
+            <button className='feedback--btn' type="submit" disabled={isSubmitting}>
+              Send
+              <span><FontAwesomeIcon icon={faPaperPlane} /></span>
             </button>
             </div>
             </div>

@@ -2,14 +2,15 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import FeedbackForm from '../../Forms/FeedbackForm'
 import man from '../../Images/bannerform.png'
+import './section.css'
 
 const FeedBack = () => {
   return (
    <div className='feedback--container'>
     <div className='sections--wrapper'>
   
-     <Row>
-            <Col xs={6}>
+     <Row  className='gx-0'>
+            <Col xs={6} className='coll'>
                 
             <div className='feedback--image'>
                 <img src={man} alt='a man '/>
