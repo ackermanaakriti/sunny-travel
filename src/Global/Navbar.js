@@ -9,9 +9,10 @@ import { useState } from 'react';
 import { navlinks } from './Data/navlinks';
 import logo from '../Global/Images/logooo.png'
 import Topbar from './Topbar';
-import {Link} from 'react-router-dom'
+import {Link, Navigate, useNavigate} from 'react-router-dom'
 import ExploreMoreBtn from '../Components/Buttons/ExploreMoreBtn';
 function Navbarr() {
+  const navigate = useNavigate();
   const [navlinkss, setnavlinks] = useState(navlinks);
   const [destListVis,setDestinationListVis]= useState(false)
   console.log(navlinkss)
@@ -57,7 +58,8 @@ function Navbarr() {
                 </Col>
                 <Col md={2}>
                   <div className='navbtn'>
-                   <button>Book Now <span><FontAwesomeIcon icon={faPaperPlane} /></span>  </button>
+
+                   <button><Link style={{textDecoration:'none'}} to='/booking'>Book Now <span><FontAwesomeIcon icon={faPaperPlane} /></span> </Link> </button>
                    
                   
                   </div>
