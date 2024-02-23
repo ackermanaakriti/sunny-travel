@@ -1,5 +1,7 @@
 import React from "react";
 import Layout from "../Layout";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Col, Container, Figure, Image, Row } from "react-bootstrap";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -33,6 +35,7 @@ const Booking = () => {
                   Last a Lifetime."
                 </h3>
               </div>
+             
               <Row className="justify-content-center">
                 <Col xl={6} lg={8} md={12}>
                   <div class="booking-form">
@@ -61,15 +64,17 @@ const Booking = () => {
                         country: Yup.string().required("Required"),
                         phone: Yup.string().required("Required"),
                       })}
-                      onSubmit={(values, { setSubmitting }) => {
-                        setTimeout(() => {
-                          alert(JSON.stringify(values, null, 2));
-                          setSubmitting(false);
-                        }, 400);
+                      onSubmit={values => {
+                        // Handle form submission
+                        console.log(values);
+                        toast.success('form submitted');
                       }}
                     >
-                      {({ isSubmitting }) => (
-                        <Form>
+                      {formik => (
+                        <form onSubmit={formik.handleSubmit}>
+                           <ToastContainer 
+                          />
+                        
                           <Row className="gy-3">
                             <Col md={6}>
                               <div class="form-group">
@@ -78,7 +83,8 @@ const Booking = () => {
                                   <span class="color-red">*</span>
                                 </label>
                                 <div class="input-group">
-                                  <select class="form-control " name="trip">
+                                  <select onChange={formik.handleChange}  onBlur={formik.handleBlur}
+                                     value={formik.values.trip} class="form-control " name="trip">
                                     <option value="" disabled selected>
                                       Select Option
                                     </option>
@@ -105,6 +111,8 @@ const Booking = () => {
                                     type="date"
                                     class="form-control"
                                     name="date"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.date}
                                   />
                                 </div>
                                 <ErrorMessage
@@ -126,6 +134,8 @@ const Booking = () => {
                                     class="form-control"
                                     placeholder="1"
                                     name="trip_days"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.trip_days}
                                   />
                                   <span class="input-group-text">
                                     <FontAwesomeIcon icon={faClock} />
@@ -150,6 +160,8 @@ const Booking = () => {
                                     class="form-control"
                                     placeholder="1"
                                     name="trip_adult"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.trip_adult}
                                   />
                                   <span class="input-group-text">
                                     <FontAwesomeIcon icon={faUser} />
@@ -177,6 +189,8 @@ const Booking = () => {
                                     class="form-control"
                                     placeholder="1"
                                     name="trip_children"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.trip_children}
                                   />
                                   <span class="input-group-text">
                                     <FontAwesomeIcon icon={faUser} />
@@ -204,6 +218,8 @@ const Booking = () => {
                                     placeholder="More Information"
                                     class="form-control"
                                     name="trip_information"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.trip_information}
                                   ></textarea>
                                 </div>
                                 <ErrorMessage
@@ -225,6 +241,8 @@ const Booking = () => {
                                     class="form-control"
                                     placeholder="Eg. John Cha"
                                     name="full_name"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.full_name}
                                   />
                                   <span class="input-group-text">
                                     <FontAwesomeIcon icon={faUser} />
@@ -248,6 +266,8 @@ const Booking = () => {
                                     class="form-control"
                                     placeholder="Eg. John Cha"
                                     name="email"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.email}
                                   />
                                   <span class="input-group-text">
                                     <FontAwesomeIcon icon={faEnvelope} />
@@ -267,7 +287,8 @@ const Booking = () => {
                                   <span class="color-red">*</span>
                                 </label>
                                 <div class="input-group">
-                                  <select class="form-control " name="country">
+                                  <select  onChange={formik.handleChange}
+                                    value={formik.values.country} class="form-control " name="country">
                                     <option value="" disabled selected>
                                       Select Option
                                     </option>
@@ -301,6 +322,8 @@ const Booking = () => {
                                   class="form-control"
                                   placeholder="Phone No."
                                   name="phone"
+                                  onChange={formik.handleChange}
+                                  value={formik.values.phone}
                                 />
                                 <span class="input-group-text">
                                   <FontAwesomeIcon icon={faPhone} />
@@ -316,7 +339,7 @@ const Booking = () => {
                               <div class="btn-wrapper">
                                 <button
                                   type="submit"
-                                  disabled={isSubmitting}
+
                                   class="btn-blue"
                                 >
                                   Send<i class="fa-solid fa-paper-plane"></i>
@@ -324,7 +347,9 @@ const Booking = () => {
                               </div>
                             </Col>
                           </Row>
-                        </Form>
+                         
+                        </form>
+                        
                       )}
                     </Formik>
                   </div>

@@ -25,10 +25,12 @@ const Contactus = () => {
             <div className="contactus--content">
               <h1>Contact Us</h1>
             </div>
+           
           </Container>
+          </div>
           <section className="contactus--section">
             <Container>
-              <Row>
+              <Row className="roww">
                 <Col md={5}>
                   <div className="contact--form">
                     <InquiryForm />
@@ -47,7 +49,7 @@ const Contactus = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={5}>
                 <div className="seccol">
                 <div className="contact--list">
                     <h4>Info</h4>
@@ -71,7 +73,7 @@ const Contactus = () => {
               </Row>
             </Container>
           </section>
-        </div>
+      
       </Layout>
     </>
   );

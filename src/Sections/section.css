@@ -27,6 +27,18 @@
         font-size: 50px;
         font-family: var(--font-librecalson);
         font-weight: 500 !important;
+        position: relative;
+        &:after{
+            content: '';
+            height: 30px;
+            width: 100%;
+            background-image: url(../Global/Images/titlebg.png);
+            position: absolute;
+            background-repeat: no-repeat;
+            right:4em;
+            background-position: right;
+            bottom: -30px;
+        }
     } 
 }
 .sections--header 
@@ -122,6 +134,19 @@
             background-color: transparent;
             font-size: 1rem;
             font-family: var(--font--poppins);
+            cursor: pointer;
+        }
+        &:hover 
+        {
+            span 
+            {
+                transform: translateY(2px);
+                transition:  ease-in-out ;
+            }
+            select 
+            {
+                color:var(--primary-color)
+            }
         }
        
     }
@@ -136,6 +161,10 @@
         color:white;
         font-family: var(--font--poppins);
         border-radius: 7px;
+        &:hover{
+            background-color: var(--secondary-color);
+            color:var(--blackcolor)
+        }
     }
 }
 .topvacationdesti--btn
@@ -146,13 +175,20 @@
     justify-content: center;
     padding-top: 40px;
 }
-.smallactiviti--container
+
+.small-acti
 {
     padding-top: 70px;
+
+    .smallactiviti--container
+     {
+        width: max-content;
+    
     .smallactiviti--img
     {
-        padding:20px 14px;
+        padding:20px 20px;
         border:2px solid #B9D0DF;
+        width: max-content;
         img 
         {
             height: 100px;
@@ -163,11 +199,15 @@
        margin:0;
        color:var(--primary-color);
        font-family: var(--font--poppins);
-       font-size: 20px;
+       font-size: 18px;
        font-weight: 500 !important;
        text-align: center;
+       
+      
     }
 }
+}
+
 
 .exploreacti--content
 {
@@ -231,11 +271,8 @@
 }
 .ourtrendingpac--contents
 {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap:30px;
-    padding-top: 80px; */
+  
+    padding-top: 80px; 
 }
 .feedback--container
 {

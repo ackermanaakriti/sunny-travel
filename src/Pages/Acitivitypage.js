@@ -11,11 +11,13 @@ const Acitivitypage = () => {
     <Layout>
     <div className="activitypage--wrapper">
         <div className="activityoverlay"></div>
+       
         <div className="activitipage--content">
           <h1>Activities</h1>
         </div>
+        </div>
         <section className="section--wrapper">
-          <div >
+         
             <Container>
               <Row gx={5}>
                 <Col md={3}>
@@ -26,9 +28,9 @@ const Acitivitypage = () => {
                 </Col>
               </Row>
             </Container>
-          </div>
+          
         </section>
-      </div>
+     
     </Layout>
      
     </>

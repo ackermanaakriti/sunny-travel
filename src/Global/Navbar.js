@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown,faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown,faPaperPlane, fas } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { navlinks } from './Data/navlinks';
 import logo from '../Global/Images/logooo.png'
@@ -12,7 +12,8 @@ import Topbar from './Topbar';
 import {Link} from 'react-router-dom'
 import ExploreMoreBtn from '../Components/Buttons/ExploreMoreBtn';
 function Navbarr() {
-  const [navlinkss, setnavlinks] = useState(navlinks)
+  const [navlinkss, setnavlinks] = useState(navlinks);
+  const [destListVis,setDestinationListVis]= useState(false)
   console.log(navlinkss)
   return (
     <>
@@ -34,7 +35,17 @@ function Navbarr() {
                   <div className='navlinks'>
                   <ul>
                     <Link style={{textDecoration:'none',}} to='/'>  <li>Home</li></Link>
-                    <Link to='/destination'>  <li>Destination</li> <span><FontAwesomeIcon icon={faChevronDown} /></span></Link>
+                    <Link to='/destination'>  <li  onMouseEnter={()=>setDestinationListVis(true)}>Destination <span >
+                      <FontAwesomeIcon icon={faChevronDown} /></span> </li>
+                      {destListVis && (<div onMouseLeave={()=>setDestinationListVis(false)} className='category--list'>
+                        <h4>Annapurna Region</h4>
+                        <li>Mountain</li>
+                        <li>Mountain</li>
+                        <li>Mountain</li>
+                        <li>Mountain</li>
+                      </div>)}
+                      
+                      </Link>
                     <Link to='/activity'>  <li>Activities</li> <span><FontAwesomeIcon icon={faChevronDown} /></span></Link>
                     <Link to='/packages'>  <li>Packages</li> <span><FontAwesomeIcon icon={faChevronDown} /></span></Link>
                     <Link style={{textDecoration:'none',}} to='/aboutus'>  <li>About Us</li></Link>

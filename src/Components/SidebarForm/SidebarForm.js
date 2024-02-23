@@ -44,7 +44,7 @@ const SidebarForm = () => {
         >
           {({isSubmitting})=>(
             <Form>
-                <div className='inquiryform--container'>
+                <div className='Sidebarinquiryform--container'>
                     <div className='inputinfo'>
                         <input placeholder='Name' type='text' name='name'/>
                         <span><FontAwesomeIcon icon={faUser} /></span>

@@ -26,3 +26,7 @@
     gap: 50px;
     margin-top: 56px;
 }
+body::-webkit-scrollbar-button
+{
+    width: 1em;
+}

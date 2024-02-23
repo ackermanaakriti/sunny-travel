@@ -2,7 +2,8 @@ import React from 'react'
 import { Container ,Row,Col} from 'react-bootstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faCloudSun, faLocationDot, faPersonWalkingWithCane } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar } from '@fortawesome/free-regular-svg-icons'
 const SearchDestinationssection = () => {
   return (
     <div className='searchdesti--container'>
@@ -23,9 +24,9 @@ const SearchDestinationssection = () => {
               </Col>
               <Col>
               <div className='searchdest'>
-                <span><FontAwesomeIcon icon={faLocationDot} /></span>
+                <span><FontAwesomeIcon icon={faCloudSun} /></span>
                 <select>
-                  <option>Destination</option>
+                  <option>Seasons</option>
                   <option>Mustang</option>
                   <option>Chitawan</option>
                 </select>
@@ -33,9 +34,9 @@ const SearchDestinationssection = () => {
               </Col>
               <Col>
               <div className='searchdest'>
-                <span><FontAwesomeIcon icon={faLocationDot} /></span>
+                <span><FontAwesomeIcon icon={faPersonWalkingWithCane} /></span>
                 <select>
-                  <option>Destination</option>
+                  <option>Activities</option>
                   <option>Mustang</option>
                   <option>Chitawan</option>
                 </select>
@@ -43,9 +44,9 @@ const SearchDestinationssection = () => {
               </Col>
               <Col>
               <div className='searchdest'>
-                <span><FontAwesomeIcon icon={faLocationDot} /></span>
+                <span><FontAwesomeIcon icon={faCalendar} /></span>
                 <select>
-                  <option>Destination</option>
+                  <option>Duration</option>
                   <option>Mustang</option>
                   <option>Chitawan</option>
                 </select>

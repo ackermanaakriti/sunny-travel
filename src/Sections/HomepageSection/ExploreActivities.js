@@ -42,7 +42,9 @@ const ExploreActivities = () => {
             </div>
             </Col>
         </Row>
+        <div className='small-acti'> 
         <Row>
+            
             <Col>
             <div className='smallactiviti--container'>
                 <div className='smallactiviti--img'>
@@ -99,7 +101,10 @@ const ExploreActivities = () => {
                 <p className='smallactiviti--content'>Heli Tour</p>
             </div>
             </Col>
+         
+            
         </Row>
+        </div>
     </div>
 
      </div>
