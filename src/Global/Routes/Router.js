@@ -10,6 +10,7 @@ import Acitivitypage from "../../Pages/Acitivitypage";
 import Packages from "../../Pages/Pacakagepage";
 import SinglePlace from "../../Pages/SinglePlace";
 import Contactus from "../../Pages/Contactus";
+import Booking from "../../Pages/Booking";
 const Routers = () => {
   return (
     <>
@@ -18,17 +19,13 @@ const Routers = () => {
         <Route path="/destination" element={<Destination />} />
         <Route path="detailoftrip" element={<DetailofTrip />} />
         <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/services" element={<ServicePage/>} />
-        <Route path="/activitydetail" element={<ActivityDetail/>} />
-        <Route path="/activity" element={<Acitivitypage/>} />
-        <Route path="/packages" element={<Packages/>} />
-        <Route path="/singleplace" element={<SinglePlace/>} />
-        <Route path="/contact" element={<Contactus/>} />
-
-
-   
-
-
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/activitydetail" element={<ActivityDetail />} />
+        <Route path="/activity" element={<Acitivitypage />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/singleplace" element={<SinglePlace />} />
+        <Route path="/contact" element={<Contactus />} />
+        <Route path="/booking" element={<Booking />} />
       </Routes>
     </>
   );
