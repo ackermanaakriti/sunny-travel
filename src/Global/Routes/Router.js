@@ -10,7 +10,7 @@ import Acitivitypage from "../../Pages/Acitivitypage";
 import Packages from "../../Pages/Pacakagepage";
 import SinglePlace from "../../Pages/SinglePlace";
 import Contactus from "../../Pages/Contactus";
-import Booking from '../../Pages/Booking'
+import Booking from "../../Pages/Booking";
 const Routers = () => {
   return (
     <>
