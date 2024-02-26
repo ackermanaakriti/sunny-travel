@@ -5,7 +5,7 @@ export const fetchBlogPosts = createAsyncThunk(
   'posts/fetchBlogPosts',
   async () => {
     try {
-      const response = await fetch('/api/posts'); 
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/v1/packages`); 
       const posts = await response.json();
       return posts;
     } catch (error) {
