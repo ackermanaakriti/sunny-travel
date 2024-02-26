@@ -17,7 +17,6 @@ export const fetchBlogPosts = createAsyncThunk(
 
 // topDestinationsActions.js
 
-import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchTopDestinations = createAsyncThunk(
   'topDestinations/fetchTopDestinations',
