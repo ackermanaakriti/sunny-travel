@@ -55,7 +55,7 @@ const Booking = () => {
                       validationSchema={Yup.object().shape({
                         trip: Yup.string().required("Required"),
                         date: Yup.string().required("Required"),
-                        trip_days: Yup.string().required("Required"),
+                        trip_days: Yup.number().required("Required"),
                         trip_adult: Yup.string().required("Required"),
                         trip_children: Yup.string().required("Required"),
                         trip_information: Yup.string().required("Required"),
@@ -83,15 +83,18 @@ const Booking = () => {
                                   <span class="color-red">*</span>
                                 </label>
                                 <div class="input-group">
-                                  <select onChange={formik.handleChange}  onBlur={formik.handleBlur}
-                                     value={formik.values.trip} class="form-control " name="trip">
+                                  <Field
+                                    class="form-control "
+                                    as="select"
+                                    name="trip"
+                                  >
                                     <option value="" disabled selected>
                                       Select Option
                                     </option>
                                     <option value="Pokhara">Pokhara</option>
                                     <option value="Mustang">Mustang</option>
                                     <option value="kathmandu">kathmandu</option>
-                                  </select>
+                                  </Field>
                                 </div>
                                 <ErrorMessage
                                   name="trip"
@@ -213,14 +216,13 @@ const Booking = () => {
                                   <span class="color-red">*</span>
                                 </label>
                                 <div class="input-group">
-                                  <textarea
+                                  <Field
+                                    as="textarea"
                                     rows="5"
                                     placeholder="More Information"
                                     class="form-control"
                                     name="trip_information"
-                                    onChange={formik.handleChange}
-                                    value={formik.values.trip_information}
-                                  ></textarea>
+                                  ></Field>
                                 </div>
                                 <ErrorMessage
                                   name="trip_information"
@@ -287,15 +289,18 @@ const Booking = () => {
                                   <span class="color-red">*</span>
                                 </label>
                                 <div class="input-group">
-                                  <select  onChange={formik.handleChange}
-                                    value={formik.values.country} class="form-control " name="country">
+                                  <Field
+                                    class="form-control "
+                                    as="select"
+                                    name="country"
+                                  >
                                     <option value="" disabled selected>
                                       Select Option
                                     </option>
                                     <option value="Nepal">Nepal</option>
                                     <option value="India">India</option>
                                     <option value="China">China</option>
-                                  </select>
+                                  </Field>
                                 </div>
                                 <ErrorMessage
                                   name="country"
