@@ -15,9 +15,6 @@ export const fetchBlogPosts = createAsyncThunk(
 );
 
 
-// topDestinationsActions.js
-
-
 export const fetchTopDestinations = createAsyncThunk(
   'topDestinations/fetchTopDestinations',
   async () => {
