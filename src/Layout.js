@@ -2,6 +2,7 @@ import React, { Children } from 'react'
 import { LayoutProvider } from './Context/LayouContext'
 import Topbar from './Global/Topbar'
 import Navbarr from './Global/Navbar'
+import Footer from './Global/Footer'
 const Layout = ({children}) => {
   return (
    <>
@@ -9,6 +10,7 @@ const Layout = ({children}) => {
    
     <Navbarr/>
     {children}
+    <Footer/>
    </LayoutProvider>
    </>
   )

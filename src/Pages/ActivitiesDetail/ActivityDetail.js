@@ -17,6 +17,7 @@ const ActivityDetail = () => {
                     <div className='activitydetail--content'>
                         <h1>Paragliding in Pokhara</h1>
                     </div>
+                    </div>
                     <section>
                         <div className='activitydetail--'>
                         <Container>
@@ -32,7 +33,7 @@ const ActivityDetail = () => {
                         </Container>
                         </div>
                     </section>
-                </div>
+                
             </Layout>
         </>
     )

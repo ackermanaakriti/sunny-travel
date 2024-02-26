@@ -1,6 +1,6 @@
 .details-page {
     .details-banner {
-        height: 300px;
+        height: 420px;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
@@ -295,7 +295,7 @@
 
 .booking-page {
     .booking-banner {
-        height: 300px;
+        height: 420px;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;

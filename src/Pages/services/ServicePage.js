@@ -6,8 +6,7 @@ import { servicesDetails } from "../about/data/About";
 const ServicePage = () => {
   return (
     <Layout>
-      <section className="services-page section-break">
-      <div className="services--wrapper">
+       <div className="services--wrapper">
           <div className="servicesoverlay">
             
           </div>
@@ -15,6 +14,8 @@ const ServicePage = () => {
             <h1>Our Services</h1>
           </div>
         </div>
+      <section className="services-page section-break">
+     
         <Container>
           <div className="services-info">
             <p className="services-summary">

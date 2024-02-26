@@ -17,7 +17,7 @@ const OurTrendingPackages = () => {
         </div>
 
         <div className='ourtrendingpac--contents'>
-          <Row gy={4}>
+          <Row className='gy-4'>
           {
             ourtrendigpac.map((item)=>
             (

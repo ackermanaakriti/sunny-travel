@@ -183,11 +183,18 @@
       font-weight: 600;
     }
   }
+}
   .contactus--section
   {
    background-color: #E1ECF1;
    padding-top: 50px;
    padding-bottom: 80px;
+   .roww 
+   {
+    display: flex;
+    justify-content: center;
+   }
+
 
   }
   .contact--form
@@ -286,4 +293,4 @@
       }
    }
   }
-}
+
