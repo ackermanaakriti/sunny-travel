@@ -38,28 +38,28 @@ const DetailofTrip = () => {
             <Container>
               <ListGroup as="ul" horizontal>
                 <ListGroupItem as="li">
-                  <Link to="#overview">
+                  <a href="#overview">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                     Overview
-                  </Link>
+                  </a>
                 </ListGroupItem>
                 <ListGroupItem as="li">
-                  <Link to="#roadmap">
+                  <a href="#roadmap">
                     <FontAwesomeIcon icon={faMap} />
                     Road Map
-                  </Link>
+                  </a>
                 </ListGroupItem>
                 <ListGroupItem as="li">
-                  <Link to="#itineray">
+                  <a href="#itinerary">
                     <FontAwesomeIcon icon={faRectangleList} />
                     Itinerary
-                  </Link>
+                  </a>
                 </ListGroupItem>
                 <ListGroupItem as="li">
-                  <Link to="#essential">
+                  <a href="#essential">
                     <FontAwesomeIcon icon={faCircleCheck} />
                     Essential Info
-                  </Link>
+                  </a>
                 </ListGroupItem>
               </ListGroup>
             </Container>

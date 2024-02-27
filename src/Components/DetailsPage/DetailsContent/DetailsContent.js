@@ -9,7 +9,7 @@ const DetailsContent = () => {
       <SmallDetail />
       <div class="details-info package-info">
         <div class="info-wrapper">
-          <h3>Overview</h3>
+          <h3 id="overview">Overview</h3>
           <p>
             Embark on an exhilarating adventure amidst the stunning landscapes
             of Pokhara with our paragliding experiences. Soar high above the
