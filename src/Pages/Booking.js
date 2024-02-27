@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../Layout";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Col, Container, Figure, Image, Row } from "react-bootstrap";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -29,16 +29,16 @@ const Booking = () => {
           </section>
           <section className="booking-form-wrapper">
             <Container>
-              <div class="heading-wrapper">
-                <h3 class="heading-ext">
+              <div className="heading-wrapper">
+                <h3 className="heading-ext">
                   "Start Your Adventure Today! Book Now and Create Memories That
                   Last a Lifetime."
                 </h3>
               </div>
-             
+
               <Row className="justify-content-center">
                 <Col xl={6} lg={8} md={12}>
-                  <div class="booking-form">
+                  <div className="booking-form">
                     <Formik
                       initialValues={{
                         trip: "",
@@ -64,27 +64,26 @@ const Booking = () => {
                         country: Yup.string().required("Required"),
                         phone: Yup.string().required("Required"),
                       })}
-                      onSubmit={values => {
+                      onSubmit={(values) => {
                         // Handle form submission
                         console.log(values);
-                        toast.success('form submitted');
+                        toast.success("form submitted");
                       }}
                     >
-                      {formik => (
+                      {(formik) => (
                         <form onSubmit={formik.handleSubmit}>
-                           <ToastContainer 
-                          />
-                        
+                          <ToastContainer />
+
                           <Row className="gy-3">
                             <Col md={6}>
-                              <div class="form-group">
-                                <label class="form-label" htmlFor="trip">
+                              <div className="form-group">
+                                <label className="form-label" htmlFor="trip">
                                   Trip
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
-                                    class="form-control "
+                                    className="form-control "
                                     as="select"
                                     name="trip"
                                   >
@@ -104,15 +103,15 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={6}>
-                              <div class="form-group">
-                                <label class="form-label" htmlFor="date">
+                              <div className="form-group">
+                                <label className="form-label" htmlFor="date">
                                   Date of Travel
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
                                     type="date"
-                                    class="form-control"
+                                    className="form-control"
                                     name="date"
                                     onChange={formik.handleChange}
                                     value={formik.values.date}
@@ -126,21 +125,24 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={4}>
-                              <div class="form-group">
-                                <label class="form-label" htmlFor="trip_days">
+                              <div className="form-group">
+                                <label
+                                  className="form-label"
+                                  htmlFor="trip_days"
+                                >
                                   Trip duration(days)
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
                                     type="number"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="1"
                                     name="trip_days"
                                     onChange={formik.handleChange}
                                     value={formik.values.trip_days}
                                   />
-                                  <span class="input-group-text">
+                                  <span className="input-group-text">
                                     <FontAwesomeIcon icon={faClock} />
                                   </span>
                                 </div>
@@ -152,21 +154,24 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={4}>
-                              <div class="form-group">
-                                <label class="form-label" htmlFor="trip_adult">
+                              <div className="form-group">
+                                <label
+                                  className="form-label"
+                                  htmlFor="trip_adult"
+                                >
                                   No. of adults
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
                                     type="number"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="1"
                                     name="trip_adult"
                                     onChange={formik.handleChange}
                                     value={formik.values.trip_adult}
                                   />
-                                  <span class="input-group-text">
+                                  <span className="input-group-text">
                                     <FontAwesomeIcon icon={faUser} />
                                   </span>
                                 </div>
@@ -180,22 +185,22 @@ const Booking = () => {
                             <Col md={4}>
                               <div className="form-group">
                                 <label
-                                  class="form-label"
+                                  className="form-label"
                                   htmlFor="trip_children"
                                 >
                                   No. of childrens
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
                                 <div className="input-group">
                                   <Field
                                     type="number"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="1"
                                     name="trip_children"
                                     onChange={formik.handleChange}
                                     value={formik.values.trip_children}
                                   />
-                                  <span class="input-group-text">
+                                  <span className="input-group-text">
                                     <FontAwesomeIcon icon={faUser} />
                                   </span>
                                 </div>
@@ -207,20 +212,20 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={12}>
-                              <div class="form-group">
+                              <div className="form-group">
                                 <label
-                                  class="form-label"
+                                  className="form-label"
                                   htmlFor="trip_information"
                                 >
                                   More Information
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
                                     as="textarea"
                                     rows="5"
                                     placeholder="More Information"
-                                    class="form-control"
+                                    className="form-control"
                                     name="trip_information"
                                   ></Field>
                                 </div>
@@ -232,21 +237,21 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={6}>
-                              <div class="form-group">
-                                <label class="form-label">
+                              <div className="form-group">
+                                <label className="form-label">
                                   Full Name
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
                                     type="text"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Eg. John Cha"
                                     name="full_name"
                                     onChange={formik.handleChange}
                                     value={formik.values.full_name}
                                   />
-                                  <span class="input-group-text">
+                                  <span className="input-group-text">
                                     <FontAwesomeIcon icon={faUser} />
                                   </span>
                                 </div>
@@ -258,20 +263,21 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={6}>
-                              <div class="form-group">
-                                <label class="form-label">
-                                  Email Address <span class="color-red">*</span>
+                              <div className="form-group">
+                                <label className="form-label">
+                                  Email Address{" "}
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
                                     type="email"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Eg. John Cha"
                                     name="email"
                                     onChange={formik.handleChange}
                                     value={formik.values.email}
                                   />
-                                  <span class="input-group-text">
+                                  <span className="input-group-text">
                                     <FontAwesomeIcon icon={faEnvelope} />
                                   </span>
                                 </div>
@@ -283,14 +289,14 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={6}>
-                              <div class="form-group">
-                                <label class="form-label" htmlFor="country">
+                              <div className="form-group">
+                                <label className="form-label" htmlFor="country">
                                   Country
-                                  <span class="color-red">*</span>
+                                  <span className="color-red">*</span>
                                 </label>
-                                <div class="input-group">
+                                <div className="input-group">
                                   <Field
-                                    class="form-control "
+                                    className="form-control "
                                     as="select"
                                     name="country"
                                   >
@@ -310,12 +316,12 @@ const Booking = () => {
                               </div>
                             </Col>
                             <Col md={6}>
-                              <label class="form-label">
+                              <label className="form-label">
                                 Phone number
-                                <span class="color-red">*</span>
+                                <span className="color-red">*</span>
                               </label>
-                              <div class="input-group">
-                                <span class="input-group-text flag-icon">
+                              <div className="input-group">
+                                <span className="input-group-text flag-icon">
                                   <Image
                                     src="assets/images/svg/flag.svg"
                                     alt=""
@@ -324,13 +330,13 @@ const Booking = () => {
                                 </span>
                                 <Field
                                   type="number"
-                                  class="form-control"
+                                  className="form-control"
                                   placeholder="Phone No."
                                   name="phone"
                                   onChange={formik.handleChange}
                                   value={formik.values.phone}
                                 />
-                                <span class="input-group-text">
+                                <span className="input-group-text">
                                   <FontAwesomeIcon icon={faPhone} />
                                 </span>
                               </div>
@@ -341,20 +347,15 @@ const Booking = () => {
                               />
                             </Col>
                             <Col md={12}>
-                              <div class="btn-wrapper">
-                                <button
-                                  type="submit"
-
-                                  class="btn-blue"
-                                >
-                                  Send<i class="fa-solid fa-paper-plane"></i>
+                              <div className="btn-wrapper">
+                                <button type="submit" className="btn-blue">
+                                  Send
+                                  <i className="fa-solid fa-paper-plane"></i>
                                 </button>
                               </div>
                             </Col>
                           </Row>
-                         
                         </form>
-                        
                       )}
                     </Formik>
                   </div>

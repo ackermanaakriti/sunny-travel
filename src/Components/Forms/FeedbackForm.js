@@ -73,7 +73,7 @@ const FeedbackForm = () => {
 
            <div className='col-md-6'>
            <label >Phone No <span>*</span></label>
-           <div class="input-group mb-3">
+           <div className="input-group mb-3">
              
                         <div className="input-group-prepend">
                          <span className="input-group-text" id="basic-addon1">
@@ -95,15 +95,15 @@ const FeedbackForm = () => {
             </div>
             <div className="col-md-12">
               <label htmlFor="email">Trip/Trek  <span>*</span></label>
-              {/* <div class="input-group">
+              {/* <div className="input-group">
                                   <select  onChange={formik.handleChange}
-                                    value={formik.values.trip} class="form-control " name="trip">
+                                    value={formik.values.trip} className="form-control " name="trip">
                                     <option value="" disabled selected>
                                       Select Option
                                     </option>
                                     <option value="Nepal">Nepal</option>
                                     <option value="India">India</option>
-                                    <option value="China">China</option>
+PP                                    <option value="China">China</option>
                                   </select>
                                 </div> */}
           <select  onChange={formik.handleChange} value={formik.values.trip}  name='trip'>
@@ -119,7 +119,7 @@ const FeedbackForm = () => {
               <textarea onChange={formik.handleChange} value={formik.values.textarea}  type="text" name="message"></textarea>
               <ErrorMessage name="message" component="div" className="error" placeholder=""/>
             </div>
-            <div class="col-md-4">
+            <div className="col-md-4">
             <button className='feedback--btn' type="submit" >
               Send
               <span><FontAwesomeIcon icon={faPaperPlane} /></span>

@@ -3,22 +3,37 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container } from "react-bootstrap";
-import './Swiper.css'
-import img from '../../Global/Images/paragliding.png'
+import "./Swiper.css";
+import img from "../../Global/Images/paragliding.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight ,faChevronLeft} from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { topdesti } from "../../Global/Data/DestinationData";
 import TestimonialCard from "../Cards/TestimonialCard";
 
 const CustomPrevArrow = (props) => {
   const { onClick } = props;
-  return <div className="review-prev-arrow" onClick={onClick}><span><FontAwesomeIcon icon={faChevronLeft} /></span></div>;
+  return (
+    <div className="review-prev-arrow" onClick={onClick}>
+      <span>
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </span>
+    </div>
+  );
 };
 
 // Custom next arrow component
 const CustomNextArrow = (props) => {
   const { onClick } = props;
-  return <div className="review-next-arrow" onClick={onClick}><span><FontAwesomeIcon icon={faChevronRight} /></span></div>;
+  return (
+    <div className="review-next-arrow" onClick={onClick}>
+      <span>
+        <FontAwesomeIcon icon={faChevronRight} />
+      </span>
+    </div>
+  );
 };
 
 function ReviewSlider() {
@@ -34,19 +49,13 @@ function ReviewSlider() {
   };
   return (
     <div className="slider-review-container">
-      
       <Slider {...settings}>
-      
-        {topdesti.map((item)=>
-        (
-           <TestimonialCard/>
-          
+        {topdesti.map((item) => (
+          <TestimonialCard />
         ))}
-       
       </Slider>
-    
     </div>
   );
 }
 
-export default  ReviewSlider;
+export default ReviewSlider;
