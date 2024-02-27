@@ -7,9 +7,20 @@ import "./pagination.css";
 import { Row } from "react-bootstrap";
 import DestinationCard from "../Cards/DestinationCard";
 
-const DestinationPagintion = () => {
-  const cardsPerPage = 2; // Number of cards per page
+const DestinationPagintion = ({destinationdata}) => {
   const [currentPage, setCurrentPage] = useState(1);
+
+
+  if(!destinationdata)
+  {
+    return
+    <div>Loading</div>
+  }
+
+     const{destination,count,success}= destinationdata;
+     console.log(destination,"from destinationpagination")
+
+  const cardsPerPage = 2; // Number of cards per page
   const totalCards = region.length;
   const totalPages = Math.ceil(totalCards / cardsPerPage);
   const startIndex = (currentPage - 1) * cardsPerPage;
@@ -26,8 +37,8 @@ const DestinationPagintion = () => {
       <div className="destinationpagination--cards">
         <div className="pagination--container">
           <Row className="gy-4"> 
-            {region.map((item) => (
-            <DestinationCard/>
+            {destination.map((item) => (
+            <DestinationCard key={item.id} name={item.name} image ={item.banner_image}/>
             ))}
           </Row>
 

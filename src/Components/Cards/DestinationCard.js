@@ -7,16 +7,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import './Card.css'
 
-const DestinationCard = () => {
+const DestinationCard = ({name,image}) => {
+    console.log(name,'from card redux')
   return (
     <>
     <div className='destinationcard--container col-md-4'>
         <div className='dest'>
             <div className='destcard--img'>
-                <img src={img}/>
+                <img src={image}/>
             </div>
             <div className='destcard--content'>
-                <h4>Mount Everest Base Camp</h4>
+                <h4>{name}</h4>
                 <div className='destcard--subcontent'>
                     <div className='destcard--review'>
                     <span>

@@ -7,18 +7,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const FeedbackForm = () => {
+  const baseUrl='http://192.168.1.7:8000' ;
+
   return (
     <div>
       <Formik
         initialValues={{
-          fullname: "",
+          full_name: "",
           nationality: "",
           message: "",
           email: "",
           trip: "",
-          phone_no: "",
+          phone_number: "",
         }}
         validationSchema={Yup.object().shape({
           fullname: Yup.string().required("Full Name is required"),
@@ -33,7 +36,21 @@ const FeedbackForm = () => {
         })}
         onSubmit={values=>
         {
-          console.log(values,"from feedback");
+         
+          try{
+
+            axios.post(`${baseUrl}/api/v1/contactinquiries`,values)
+           .then((res)=>{
+            console.log(res,'this is response')
+           })
+           .catch((err)=>console.log(err))
+      
+      
+          } 
+           catch(error)
+          {
+            console.log('error while submittng',error)
+          }
           toast.success('your feedback is submitted')
         }}
       >

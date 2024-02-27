@@ -15,7 +15,7 @@ function Navbarr() {
   const navigate = useNavigate();
   const [navlinkss, setnavlinks] = useState(navlinks);
   const [destListVis,setDestinationListVis]= useState(false)
-  console.log(navlinkss)
+  // console.log(navlinkss)
   return (
     <>
       <div className='navbar--main--wrapper'>

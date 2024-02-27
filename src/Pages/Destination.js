@@ -1,14 +1,41 @@
-import React from "react";
+import React,{useEffect} from "react";
 import SideCheckbLayout from "../Components/Layouts/SideCheckboxLayout";
 import Layout from "../Layout";
 import "./Pages.css";
 import { Col, Row, Container } from "react-bootstrap";
 import DestinationPagintion from "../Components/Pagination/DestinationPagination";
 import SidecheckBoxBar from "../Components/SideCheckBox/SidecheckBoxBar";
+import axios from "axios";
+import { useSelector,useDispatch } from "react-redux";
+import { fetchDestination } from "../Redux/Store/Slices/DestinationSlice";
 
 const Destination = () => {
-  const baseurl = process.env.React_base_url;
-  console.log(baseurl, "helo");
+  // const baseurl = 'https://jsonplaceholder.typicode.com/users';
+  // const baseurl='http://192.168.1.7:8000';
+  // console.log(baseurl, "helo");
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(`${baseurl}/api/v1/packages`); 
+  //       console.log(response,'from packaged redux')
+  //     } catch (error) {
+  //      console.log(error)
+  //     }
+  //   };
+  //   fetchData();
+  //   return () => {
+  //   };
+  // }, []);
+  const dispatch = useDispatch();
+
+  const { destinationdata, loading, error } = useSelector(state => state.destination);
+
+ console.log(destinationdata,'from redux')
+ useEffect(() => {
+  dispatch(fetchDestination());
+}, [dispatch]);
+
+  
   return (
     <Layout>
       <div className="destinationpage--wrapper">
@@ -26,7 +53,7 @@ const Destination = () => {
                  <SidecheckBoxBar/>
                 </Col>
                 <Col className="side-sidecomp" md={9}>
-                <DestinationPagintion/>
+                <DestinationPagintion destinationdata={destinationdata}/>
                 </Col>
               </Row>
             </Container>

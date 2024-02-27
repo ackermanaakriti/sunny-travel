@@ -9,8 +9,30 @@ import Cardbuttons from "../Buttons/Cardbuttons";
 
 const SidecheckBoxBar = () => {
   const [regionVis, setRegionVis] = useState(null);
+  const[selectedRegion,setSelectedRegion] = useState([])
+  const[selectAll,setSelectAll] =useState(null)
   const [activitiesVis, setactivitiesVis] = useState(null);
   const [budgetVis, setbudgetVis] = useState(null);
+ 
+
+  const handleRegionChange=(event)=>
+  {
+    const itemName = event.target.value;
+    const isChecked = event.target.checked;
+    if(itemName==='All')
+    {
+      setSelectAll(isChecked);
+      setSelectedRegion(isChecked ? ['item1', 'item2', 'item3'] : []);
+    }
+    if (isChecked) {
+      setSelectedRegion([...selectedRegion, itemName]);
+    } else {
+      setSelectedRegion(selectedRegion.filter((item) => item !== itemName));
+    }
+  }
+  
+
+  //  console.log('selected region are' ,selectedRegion)
   return (
     <>
       
@@ -32,13 +54,16 @@ const SidecheckBoxBar = () => {
               </div>
               {regionVis && (
                 <div className="form--checkboxes--list">
+                 
                   {region.map((item, index) => (
                     <div class="form-check" key={index}>
                       <input
                         className="form-check-input"
                         type="checkbox"
-                        value=""
+                        value={item.name}
                         id={item.name}
+                        // checked={selectedRegion?.includes(item?.name)}
+                        onChange={handleRegionChange}
                       />
                       <label className="form-check-label" for={item.name}>
                         {item.name}
