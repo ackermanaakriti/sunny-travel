@@ -4,7 +4,7 @@ import './Card.css'
 import img from '../../Global/Images/activityone.png'
 import { Col } from 'react-bootstrap'
 
-const ActivitypageCard = () => {
+const ActivitypageCard = ({name,image,id}) => {
   return (
     <Col md={4}>
    <div className='activitiescard--wrapper '>
@@ -12,7 +12,7 @@ const ActivitypageCard = () => {
         <img src={img} alt='paragliding' />
     </div>
     <div className='activitiescard--content'>
-       <h4>Paragliding</h4>
+       <h4>{name}</h4>
        <p>Pokhara</p>
     </div>
    </div>

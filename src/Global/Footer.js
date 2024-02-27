@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Row,Col } from 'react-bootstrap'
 import logo from '../Global/Images/sunnylogo.png'
 import { Link } from 'react-router-dom'
@@ -6,7 +6,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
 const Footer = () => {
+    const [email,setSubcribeEmail] = useState()
+    const baseUrl = 'http://192.168.1.7:8000'
+
+
+    const handlefooterForm= async(e)=>
+    { 
+        e.preventDefault();
+        console.log('hello from footer')
+       const res =  await axios.post(`${baseUrl}/api/v1/news-letter`,email);
+       console.log(res);
+
+    }
   return (
     <>
     <div className='footer--container'>
@@ -45,8 +58,8 @@ const Footer = () => {
                 <Col md={3}>
                     <div className='footer--form'>
                     <h4>Subcribe to our Newsletter</h4>
-                    <form>
-                        <div className='input--'>  <input placeholder='Enter your email address'/>
+                    <form onSubmit={handlefooterForm}>
+                        <div className='input--'>  <input onChange={(e)=>setSubcribeEmail(e.target.value)}  name='email' value={email} type='email' placeholder='Enter your email address'/>
                         <span><FontAwesomeIcon icon={faEnvelope} /></span></div>
                        
                         <button type='submit'> Submit</button>

@@ -192,6 +192,11 @@
   
       }
     }
+    .errmsg
+    {
+      font-size: 14px;
+      color:red;
+    }
     
   }
 

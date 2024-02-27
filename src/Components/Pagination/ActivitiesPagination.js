@@ -8,7 +8,9 @@ import "./pagination.css";
 import { Row } from "react-bootstrap";
 import ActivitypageCard from "../Cards/ActivitypageCard";
 
-const ActivitiesPagination = () => {
+const ActivitiesPagination = ({activities}) => {
+  const{activity,count}= activities;
+  console.log(activity)
   const cardsPerPage = 2; // Number of cards per page
   const [currentPage, setCurrentPage] = useState(1);
   const totalCards = region.length;
@@ -27,8 +29,8 @@ const ActivitiesPagination = () => {
       <div className="activitiespagination--cards">
         <div className="pagination--container">
           <Row className="gy-4"> 
-            {region.map((item) => (
-             <ActivitypageCard/>
+            {activity?.map((item) => (
+             <ActivitypageCard name={item.name} id={item.id} image={item.banner_image} />
             ))}
           </Row>
 
