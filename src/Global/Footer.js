@@ -8,7 +8,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios'
 const Footer = () => {
-    const [email,setSubcribeEmail] = useState()
+    const [email,setSubcribeEmail] = useState('')
     const baseUrl = 'http://192.168.1.7:8000'
 
 
@@ -16,8 +16,17 @@ const Footer = () => {
     { 
         e.preventDefault();
         console.log('hello from footer')
-       const res =  await axios.post(`${baseUrl}/api/v1/news-letter`,email);
-       console.log(res);
+        try 
+        {
+            const res =  await axios.post(`${baseUrl}/api/v1/news-letter`,{email})
+           console.log(res,'footer')
+        }
+        catch(err)
+        {
+            console.log("error while submiting form",err);
+        }
+       
+      
 
     }
   return (

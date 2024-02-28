@@ -45,7 +45,7 @@
       }
     }
     .form--checkboxes--list {
-      padding: 10px;
+      padding: 10px 20px;
       .form-check {
         padding-top: 5px;
 
@@ -53,6 +53,7 @@
         }
         label {
           font-size: 18px;
+          text-transform: capitalize;
         }
       }
     }
@@ -79,14 +80,16 @@
       }
     }
     .form--checkboxes--list {
-      padding: 10px;
+      padding: 10px 20px;
       .form-check {
         padding-top: 5px;
+       
 
         input {
         }
         label {
           font-size: 18px;
+          text-transform: capitalize;
         }
       }
     }
@@ -113,7 +116,7 @@
       }
     }
     .form--checkboxes--list {
-      padding: 10px;
+      padding: 10px 20px;
       .form-check {
         padding-top: 5px;
 
@@ -121,6 +124,7 @@
         }
         label {
           font-size: 18px;
+          text-transform: capitalize;
         }
       }
     }
@@ -226,5 +230,12 @@
         border:none;
         outline: none;
         background-color: transparent;
+        border-radius: 7px;
+        padding:0px 10px;
+        font-size: 16px;
+        &:focus 
+        {
+          background-color: rgb(245, 180, 180);
+        }
     }
 }
