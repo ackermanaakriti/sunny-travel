@@ -18,7 +18,7 @@ const DestinationPagintion = ({destinationdata}) => {
   }
 
      const{destination,count,success}= destinationdata;
-     console.log(destination,"from destinationpagination")
+    //  console.log(destination,"from destinationpagination")
 
   const cardsPerPage = 2; // Number of cards per page
   const totalCards = region.length;

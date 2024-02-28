@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Card.css'
 
 const DestinationCard = ({name,image}) => {
-    console.log(name,'from card redux')
+    // console.log(name,'from card redux')
   return (
     <>
     <div className='destinationcard--container col-md-4'>

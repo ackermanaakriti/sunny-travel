@@ -1,0 +1,127 @@
+
+@media only screen and (max-width: 2500px) {
+    .navbar--container{
+        nav 
+        {
+            .menu--bar{
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1199px) {
+
+    .navbar--main--wrapper
+    {
+        .navbar--container 
+        {
+            nav 
+            {
+                .navlinks 
+                {
+                    li 
+                    {
+                        font-size: 16px;
+                       span 
+                       {
+                        font-size: 14px;
+                        padding-left: 4px;
+                       }
+                    }
+                }
+            }
+            .menu--bar
+            {
+              display: none;
+            }
+        }
+    }
+ 
+    .heropage--wrapper
+    {
+        .heroopage--content
+        {
+            p 
+            {
+                font-size: 16px;
+                color:red;
+               
+            }
+        }
+    }
+    .searchdesti--container 
+    {
+        .searchdesti--wrapper 
+        {
+            padding:56px;
+            transition: ease-in;
+            .searchdest
+            {
+                padding:12px 10px;
+                gap:7px;
+                align-items: center;
+                span 
+                {
+                    font-size: 18px;
+                }
+                select 
+                {
+                    font-size: 15px;
+                }
+            }
+            .searchdest-btn {
+                padding:12px 10px;
+                font-size: 0.99rem;
+            }
+
+                   }
+    }
+}
+@media only screen and (max-width: 992px) {
+.navbar--main--wrapper{
+    position: relative;
+    .topbar--wrapper 
+    {
+        display: none;
+    }
+    .navbar--container
+    {
+        nav 
+        {
+            .navlinks 
+            {
+                ul {
+                    display: flex;
+                flex-direction: column;
+                
+                position: absolute;
+                height: 600px;
+                top:0;
+                left:0;
+                background-color: rgba(0, 0, 0, 0.479);
+                width: 400px;
+                }
+               
+            }
+            .navbtn
+            {
+                .menu--bar
+                 {
+                  display: block;
+                  font-size: 30px;
+                  &:hover 
+                  {
+                    color: var(--primary-color);
+                  }
+                 }
+    
+                button 
+                {
+                    display: none;
+                }
+            }
+        }
+      
+    }
+}
+}

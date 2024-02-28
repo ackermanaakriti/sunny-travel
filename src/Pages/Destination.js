@@ -27,10 +27,15 @@ const Destination = () => {
   //   };
   // }, []);
   const dispatch = useDispatch();
+  const {region,activities,budget} = useSelector(state=>state.filters)
+  console.log('hello from reigon rdux hooo',region)
+  console.log('hello from activities rdux hooo',activities)
+
+  console.log('hello from budger rdux hooo',budget)
+
 
   const { destinationdata, loading, error } = useSelector(state => state.destination);
 
- console.log(destinationdata,'from redux')
  useEffect(() => {
   dispatch(fetchDestination());
 }, [dispatch]);

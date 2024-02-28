@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import "./Sidebarcheckbox.css";
 import { activities, budget, region } from "../../Global/Data/Checkboxes";
@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TitleBox from "../TitleBox";
 import Cardbuttons from "../Buttons/Cardbuttons";
 import { useDispatch } from "react-redux";
+import { addFilterActivity, addFilterBudget, addFilterRegion, fetchfilteredActivities, fetchfilteredBudget, fetchfilteredRegion } from "../../Redux/Store/Slices/FilterSlice";
 
 const SidecheckBoxBar = () => {
   const dispatch = useDispatch();
@@ -35,7 +36,8 @@ const SidecheckBoxBar = () => {
       setSelectAllRegion(isChecked);
       if (isChecked) {
         setSelectedRegion(region.map((item) => item.name));
-        dispatch(selectedRegion)
+       
+       
       } else {
         setSelectedRegion([]);
       }
@@ -47,6 +49,8 @@ const SidecheckBoxBar = () => {
       }
     }
   };
+ 
+
 // handling Acitivities
   const handleActivitiesChange  = (event) => {
     const itemName = event.target.value;
@@ -55,7 +59,7 @@ const SidecheckBoxBar = () => {
       setSelectAllActivities(isChecked);
       if (isChecked) {
         setSelectedActivities(activities.map((item) => item.name));
-        dispatch(selectedActivities)
+
       } else {
         setSelectedActivities([]);
       }
@@ -77,7 +81,7 @@ const SidecheckBoxBar = () => {
       if(isChecked)
       {
         setSelectedBudget([...selectedBudget,itemName])
-        dispatch(selectedBudget)
+     
       }
       else{
         setSelectedBudget([])
@@ -90,9 +94,15 @@ const SidecheckBoxBar = () => {
     setSelectedBudget([])
     setSelectedRegion([])
   }
+  
+  useEffect(()=>
+  {
+    dispatch(fetchfilteredRegion(selectedRegion))
+    dispatch(fetchfilteredActivities(selectedActivities))
+    dispatch(fetchfilteredBudget(selectedBudget))
+  },[selectedRegion,selectedActivities,selectedBudget])
 
-
-   console.log('selected region are' ,selectedRegion,selectedBudget,selectedActivities)
+  //  console.log('selected region are' ,selectedRegion,selectedBudget,selectedActivities)
    
   return (
     <>

@@ -75,12 +75,13 @@ overflow: hidden;
     .majesticCard--img {
         position: relative;
         width: 100%;
-        height: 650px;
+        height: 622px;
 
         img {
             position: relative;
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
 
     }
