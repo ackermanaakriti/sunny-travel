@@ -38,7 +38,7 @@ const Footer = () => {
             <Row>
                 <Col md={2}>
                     <div className='footer-logo'>
-                        <img src={logo} alt='logo'/>
+                      logo
                     </div>
                 </Col>
                 <Col md={7}>

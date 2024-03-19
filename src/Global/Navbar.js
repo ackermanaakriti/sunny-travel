@@ -28,7 +28,7 @@ function Navbarr() {
               <nav>
                 <Col md={1}>
                   <div className='nav-logo'>
-                    <img src={logo} alt='sunny-travel-logo'/>
+                 logo
 
                   </div>
                 </Col>
